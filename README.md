@@ -20,3 +20,4 @@ When you type `~smile~`, it gets auto-replaced with a Tymoji smile. Neat, huh?
     ~frowntear~ - Frowning Face with tear
     ~smilewinktongue~ - Smiling face winking with tongue stuck out
     ~moneymouth~ - Money face with money mouth (yes it's a real Unicode)
+    ~sleeping~ - Sleeping face

@@ -26,6 +26,7 @@ var emojisData = [
  ["~frowntear~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/frowntear.png", "~frowntear~"],
  ["~smilewinktongue~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/smilewinktongue.png", "~smilewinktongue~"],
  ["~moneymouth~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/moneymouth.png", "~moneymouth~"],
+ ["~sleeping~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/sleeping.png", "~sleeping~"],
 ];
 
 var doEmojis = function() {
