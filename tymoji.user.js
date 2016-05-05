@@ -8,7 +8,6 @@
 // ==/UserScript==
 var posts = document.getElementsByClassName( 'post_body_html') ;
 var sigs = document.getElementsByClassName( 'postsignature' );
-var text = sigs.concat(posts);
 /*
 var code = document.getElementsByClassName('code'); // Code blocks
 // Remove all the code blocks from the text to run through
@@ -32,15 +31,23 @@ var emojisData = [
 ];
 
 var doEmojis = function() {
-for (var i = 0, l = text.length; i < l; i++) {
-  var el = text[i];
-  for (var j = 0, n = emojisData.length; j < n; j++) {
-    var matching = new RegExp(emojisData[j][0], "g");
-    var replaceString = '<img src="' + emojisData[j][1] + '" title="' + emojisData[j][2] + '" width="16" height="16"></img>';
-    el.innerHTML = el.innerHTML.replace(matching, replaceString);
+  for (var i = 0, l = posts.length; i < l; i++) {
+    var el = posts[i];
+    for (var j = 0, n = emojisData.length; j < n; j++) {
+      var matching = new RegExp(emojisData[j][0], "g");
+      var replaceString = '<img src="' + emojisData[j][1] + '" title="' + emojisData[j][2] + '" width="16" height="16"></img>';
+      el.innerHTML = el.innerHTML.replace(matching, replaceString);
+    };  
   };
-  
-};
+
+  for (var i = 0, l = sigs.length; i < l; i++) {
+    var el = sigs[i];
+    for (var j = 0, n = emojisData.length; j < n; j++) {
+      var matching = new RegExp(emojisData[j][0], "g");
+      var replaceString = '<img src="' + emojisData[j][1] + '" title="' + emojisData[j][2] + '" width="16" height="16"></img>';
+      el.innerHTML = el.innerHTML.replace(matching, replaceString);
+    };
+  };
 };
 
 doEmojis();
