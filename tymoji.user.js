@@ -6,7 +6,9 @@
 // @version     0.1
 // @grant       none
 // ==/UserScript==
-var text = document.getElementsByClassName('post_body_html');
+var posts = document.getElementsByClassName('post_body_html');
+var sigs = document.getElementsByClassName('postsignature');
+var text = posts.concat(sigs);
 /*
 var code = document.getElementsByClassName('code'); // Code blocks
 // Remove all the code blocks from the text to run through
