@@ -16,13 +16,13 @@ text = text.filter( function( el ) {
 */
 
 var emojisData = [
- [":smile:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/smile.png", ":smile:"], 
- [":frown:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/frown.png", "frown:"],  
- [":elims:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/elims.png", ":elims:"], 
- [":nomouth:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/nomouth.png", ":nomouth:"],  
- [":frownangry:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/frownangry.png", ":frownangry:"],  
- [":openmouth:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/openmouth.png", ":openmouth:"],  
- [":smiletongue:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/smiletongue.png", ":smiletongue:"],  
+ ["~smile~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/smile.png", "~smile~"], 
+ ["~frown~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/frown.png", "frown~"],  
+ ["~elims~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/elims.png", "~elims~"], 
+ ["~nomouth~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/nomouth.png", "~nomouth~"],  
+ ["~frownangry~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/frownangry.png", "~frownangry~"],  
+ ["~openmouth~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/openmouth.png", "~openmouth~"],  
+ ["~smiletongue~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/smiletongue.png", "~smiletongue~"],  
 ];
 
 var doEmojis = function() {
