@@ -17,3 +17,6 @@ When you type `~smile~`, it gets auto-replaced with a Tymoji smile. Neat, huh?
     ~frownangry~ - Angry frowning face
     ~openmouth~ - Face with open mouth
     ~smiletongue~ - Smiling Face with tongue stuck out
+    ~frowntear~ - Frowning Face with tear
+    ~smilewinktongue~ - Smiling face winking with tongue stuck out
+    ~moneymouth~ - Money face with money mouth (yes it's a real Unicode)
