@@ -3,12 +3,12 @@
 // @namespace   https://scratch.mit.edu/users/Tymewalk
 // @description Tymewalk's Emojis for use on the Scratch forums. All in one handy userscript.
 // @include     https://scratch.mit.edu/discuss/*
-// @version     0.1
+// @version     0.1-dev
 // @grant       none
 // ==/UserScript==
-var posts = document.getElementsByClassName('post_body_html');
-var sigs = document.getElementsByClassName('postsignature');
-var text = posts.concat(sigs);
+var posts = document.getElementsByClassName( 'post_body_html') ;
+var sigs = document.getElementsByClassName( 'postsignature' );
+var text = sigs.concat(posts);
 /*
 var code = document.getElementsByClassName('code'); // Code blocks
 // Remove all the code blocks from the text to run through
