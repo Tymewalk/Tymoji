@@ -21,6 +21,8 @@ var emojisData = [
  [":elims:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/elims.png", ":elims:"], 
  [":nomouth:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/nomouth.png", ":nomouth:"],  
  [":frownangry:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/frownangry.png", ":frownangry:"],  
+ [":openmouth:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/openmouth.png", ":openmouth:"],  
+ [":smiletongue:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/smiletongue.png", ":smiletongue:"],  
 ];
 
 var doEmojis = function() {

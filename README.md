@@ -15,3 +15,5 @@ When you type `:smile:`, it gets auto-replaced with a Tymoji smile. Neat, huh?
     :elims: - Upside-Down Smiling Face
     :nomouth: - Face with no mouth
     :frownangry: - Angry frowning face
+    :openmouth: - Face with open mouth
+    :smiletongue: - Smiling Face with tongue stuck out
