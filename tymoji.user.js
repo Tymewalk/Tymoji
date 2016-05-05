@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Tymojis
 // @namespace   https://scratch.mit.edu/users/Tymewalk
-// @description Emojis on the Scratch forums! By Tymewalk.
+// @description Tymewalk's Emojis for use on the Scratch forums. All in one handy userscript.
 // @include     https://scratch.mit.edu/discuss/*
 // @version     0.1
 // @grant       none
