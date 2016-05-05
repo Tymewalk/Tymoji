@@ -19,6 +19,8 @@ var emojisData = [
  [":scratchsmile:", "https://cdn.scratch.mit.edu/scratchr2/static/__02ce1f3dc9988283d4bd0be0ce46fe4f__/djangobb_forum/img/smilies/smile.png", ":scratchsmile:"],
  [":smile:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/smile.png", ":smile:"], 
  [":frown:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/frown.png", "frown:"],  
+ [":elims:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/elims.png", ":elims:"], 
+ [":nomouth:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/nomouth.png", ":nomouth:"],  
 ];
 
 var doEmojis = function() {
