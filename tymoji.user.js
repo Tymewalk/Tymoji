@@ -21,6 +21,7 @@ var emojisData = [
  [":frown:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/frown.png", "frown:"],  
  [":elims:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/elims.png", ":elims:"], 
  [":nomouth:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/nomouth.png", ":nomouth:"],  
+ [":frownangry:", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/frownangry.png", ":frownangry:"],  
 ];
 
 var doEmojis = function() {
