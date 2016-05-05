@@ -10,5 +10,7 @@ Enter Tymoji. Tymoji allows you to insert emojis in the Scratch forums as simple
 
 ## List of emojis
 
-:smile:
-:frown:
+:smile: - Smiling Face
+:frown: - Frowning Face
+:elims: - Upside-Down Smiling Face
+:nomouth: - Face with no mouth
