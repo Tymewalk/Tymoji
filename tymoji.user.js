@@ -55,18 +55,33 @@ var doEmojis = function() {
 
 doEmojis();
 
-var settingsPopup = $('<div><p>What kind of emojis would you like?</p><button id="tymojiSetter">Tymoji</button><br/> <button id="emojioneSetter">EmojiOne</button><br /> </div>');
+
+var settingsPopup = $('<div><p>What kind of emojis would you like?</p><button id="tymojiSetter">Tymoji</button><br /><button id="emojioneSetter">EmojiOne</button></div>');
 
 var newHTML         = document.createElement ('div');
-newHTML.innerHTML   = '             \
-    <div id="gmSomeID">             \
+/*newHTML.innerHTML   = '             \
+    <div id="settingsPage">             \
         <p>Some paragraph</p>       \
         <button id="showPopUp">Show Popup</button>         \
     </div>                          \
 ';
+*/
+newHTML.innerHTML   = '             \
+    <div id="settingsPage">             \
+        <p>Tymoji Settings</p>       \
+        <button id="tymojiSetter">Use Tymojis</button>         \
+        <button id="emojioneSetter">Use EmojiOne</button>         \
+    </div>                          \
+';
+document.body.appendChild(newHTML);
 
-document.body.appendChild (newHTML);
-
-$('#showPopUp').click(function () {
+/*$('#showPopUp').click(function () {
     settingsPopup.dialog();
 });
+*/
+$('#tymojiSetter').click(function () {
+    console.log("Set Tymojis");
+})
+$('#emojioneSetter').click(function () {
+    console.log("Set EmojiOne");
+})
