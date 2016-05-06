@@ -21,3 +21,6 @@ When you type `~smile~`, it gets auto-replaced with a Tymoji smile. Neat, huh?
     ~smilewinktongue~ - Smiling face winking with tongue stuck out
     ~moneymouth~ - Money face with money mouth (yes it's a real Unicode)
     ~sleeping~ - Sleeping face
+    ~wink~ - Winking face
+    ~package~ - Package
+    ~yum~ - Face savouring food
