@@ -10,16 +10,16 @@ When you type `~smile~`, it gets auto-replaced with a Tymoji smile. Neat, huh?
 
 ## Full list
 
-    ~smile~ - Smiling Face
-    ~frown~ - Frowning Face
-    ~elims~ - Upside-Down Smiling Face
-    ~nomouth~ - Face with no mouth
-    ~frownangry~ - Angry frowning face
-    ~openmouth~ - Face with open mouth
-    ~smiletongue~ - Smiling Face with tongue stuck out
-    ~frowntear~ - Frowning Face with tear
-    ~smilewinktongue~ - Smiling face winking with tongue stuck out
-    ~moneymouth~ - Money face with money mouth (yes it's a real Unicode)
+    ~slight_smile~ - Smiling Face
+    ~slight_frown~ - Frowning Face
+    ~upside_down~ - Upside-Down Smiling Face
+    ~no_mouth~ - Face with no mouth
+    ~rage~ - Angry frowning face
+    ~open_mouth~ - Face with open mouth
+    ~stuck_out_tongue~ - Smiling Face with tongue stuck out
+    ~cry~ - Frowning Face with tear
+    ~stuck_out_tongue_winking_face~ - Smiling face winking with tongue stuck out
+    ~money_mouth~ - Money face with money mouth (yes it's a real Unicode)
     ~sleeping~ - Sleeping face
     ~wink~ - Winking face
     ~package~ - Package
