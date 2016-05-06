@@ -17,16 +17,16 @@ text = text.filter( function( el ) {
 */
 
 var emojisData = [
- ["~smile~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/smile.png", "~smile~"], 
- ["~frown~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/frown.png", "frown~"],  
- ["~elims~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/elims.png", "~elims~"], 
- ["~nomouth~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/nomouth.png", "~nomouth~"],  
- ["~frownangry~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/frownangry.png", "~frownangry~"],  
- ["~openmouth~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/openmouth.png", "~openmouth~"],  
- ["~smiletongue~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/smiletongue.png", "~smiletongue~"],
- ["~frowntear~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/frowntear.png", "~frowntear~"],
- ["~smilewinktongue~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/smilewinktongue.png", "~smilewinktongue~"],
- ["~moneymouth~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/moneymouth.png", "~moneymouth~"],
+ ["~slight_smile~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/slight_smile.png", "~slight_smile~"], 
+ ["~slight_frown~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/slight_frown.png", "~slight_frown~"],  
+ ["~upside_down~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/upside_down.png", "~upside_down~"], 
+ ["~no_mouth~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/no_mouth.png", "~no_mouth~"],  
+ ["~rage~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/rage.png", "~rage~"],  
+ ["~open_mouth~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/open_mouth.png", "~open_mouth~"],  
+ ["~stuck_out_tongue~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/stuck_out_tongue.png", "~stuck_out_tongue~"],
+ ["~cry~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/cry.png", "~cry~"],
+ ["~stuck_out_tongue_winking_eye~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/stuck_out_tongue_winking_eye.png", "~stuck_out_tongue_winking_eye~"],
+ ["~money_mouth~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/money_mouth.png", "~money_mouth~"],
  ["~sleeping~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/sleeping.png", "~sleeping~"],
 ];
 
