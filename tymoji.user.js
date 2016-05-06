@@ -54,3 +54,19 @@ var doEmojis = function() {
 };
 
 doEmojis();
+
+var settingsPopup = $('<div><p>What kind of emojis would you like?</p><button id="tymojiSetter">Tymoji</button><br/> <button id="emojioneSetter">EmojiOne</button><br /> </div>');
+
+var newHTML         = document.createElement ('div');
+newHTML.innerHTML   = '             \
+    <div id="gmSomeID">             \
+        <p>Some paragraph</p>       \
+        <button id="showPopUp">Show Popup</button>         \
+    </div>                          \
+';
+
+document.body.appendChild (newHTML);
+
+$('#showPopUp').click(function () {
+    settingsPopup.dialog();
+});
