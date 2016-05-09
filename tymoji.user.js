@@ -16,7 +16,7 @@ text = text.filter( function( el ) {
 } );
 */
 
-var emojisData = [
+var tymojiData = [
  ["~slight_smile~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/slight_smile.png", "~slight_smile~"], 
  ["~slight_frown~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/slight_frown.png", "~slight_frown~"],  
  ["~upside_down~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/upside_down.png", "~upside_down~"], 
@@ -33,7 +33,36 @@ var emojisData = [
  ["~yum~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/yum.png", "~yum~"],
 ];
 
+var emojioneData = [
+ ["~slight_smile~", "http://emojione.com/wp-content/uploads/assets/emojis/1f642.svg", "~slight_smile~"], // For testing
+ ["~slight_frown~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/slight_frown.png", "~slight_frown~"],  
+ ["~upside_down~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/upside_down.png", "~upside_down~"], 
+ ["~no_mouth~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/no_mouth.png", "~no_mouth~"],  
+ ["~rage~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/rage.png", "~rage~"],  
+ ["~open_mouth~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/open_mouth.png", "~open_mouth~"],  
+ ["~stuck_out_tongue~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/stuck_out_tongue.png", "~stuck_out_tongue~"],
+ ["~cry~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/cry.png", "~cry~"],
+ ["~stuck_out_tongue_winking_eye~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/stuck_out_tongue_winking_eye.png", "~stuck_out_tongue_winking_eye~"],
+ ["~money_mouth~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/money_mouth.png", "~money_mouth~"],
+ ["~sleeping~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/sleeping.png", "~sleeping~"],
+ ["~wink~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/wink.png", "~wink~"],
+ ["~package~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/package.png", "~package~"],
+ ["~yum~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/yum.png", "~yum~"],
+];
+
+var emojisData = tymojiData;
+var emojiType = "tymoji";
+//if !GM_getValue("emojisType", false) {
+// GM_setValue("emojisType", "tymoji");
+//}
 var doEmojis = function() {
+  emojiType = "emojione";//GM_getValue("emojisType", "tymoji");
+  if (emojiType === "emojione") {
+    emojisData = emojioneData;
+  } else {
+    emojisData = tymojiData;
+  };
+
   for (var i = 0, l = posts.length; i < l; i++) {
     var el = posts[i];
     for (var j = 0, n = emojisData.length; j < n; j++) {
@@ -55,22 +84,12 @@ var doEmojis = function() {
 
 doEmojis();
 
-
 var settingsPopup = $('<div><p>What kind of emojis would you like?</p><button id="tymojiSetter">Tymoji</button><br /><button id="emojioneSetter">EmojiOne</button></div>');
 
-var newHTML         = document.createElement ('div');
-/*newHTML.innerHTML   = '             \
-    <div id="settingsPage">             \
-        <p>Some paragraph</p>       \
-        <button id="showPopUp">Show Popup</button>         \
-    </div>                          \
-';
-*/
-newHTML.innerHTML   = '             \
-    <div id="settingsPage">             \
+var newHTML         = document.createElement('div');
+newHTML.innerHTML   = '<div id="settingsPage">             \
         <p>Tymoji Settings</p>       \
-        <button id="tymojiSetter">Use Tymojis</button>         \
-        <button id="emojioneSetter">Use EmojiOne</button>         \
+        <button id="tymojiSetter">Use Tymojis</button><button id="emojioneSetter">Use EmojiOne</button> \
     </div>                          \
 ';
 document.body.appendChild(newHTML);
@@ -80,8 +99,10 @@ document.body.appendChild(newHTML);
 });
 */
 $('#tymojiSetter').click(function () {
-    console.log("Set Tymojis");
-})
+    GM_setValue("emojisType", "tymoji");
+    
+});
+
 $('#emojioneSetter').click(function () {
-    console.log("Set EmojiOne");
-})
+    GM_setValue("emojisType", "emojione");
+});
