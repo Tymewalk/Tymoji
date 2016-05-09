@@ -4,8 +4,6 @@
 // @description Tymewalk's Emojis for use on the Scratch forums. All in one handy userscript.
 // @include     https://scratch.mit.edu/discuss/*
 // @version     0.1-dev
-// @grant       GM_getResourceText
-// @resource	configHTML https://raw.githubusercontent.com/Tymewalk/Tymoji/settings/res/settings.html
 // ==/UserScript==
 
 var tymojiSettings = document.createElement("div");
@@ -33,28 +31,7 @@ emojiOneButton.type="button";
 emojiOneButton.value="Use EmojiOne";
 emojiOneButton.onclick = setEmojiOne;
 document.body.appendChild(emojiOneButton);
-// Add the settings
-var settingsHTML = GM_getResourceText("configHTML");
 
-var settingsDiv = document.createElement('div');
-settingsDiv.innerHTML = settingsHTML;
-document.body.insertBefore(settingsDiv, document.body.firstChild);
-
- 
-function showAlert()
-{
-    alert("Hello World");
-}
-/*
-$('#tymojiSetter').click(function () {
-     console.log("SET");
-     setTymojis();
-});
- 
-$('#emojioneSetter').click(function () {
-     setEmojiOne();
-});
-*/
 var posts = document.getElementsByClassName('post_body_html');
 var sigs = document.getElementsByClassName('postsignature');
 /*
@@ -108,7 +85,6 @@ if (!localStorage.tymojiEmojisType) {
 };
 
 var addEmojis = function() {
-  console.log(localStorage.tymojiEmojisType);
   console.log("[TYMOJI] Adding emojis");
   emojiType = localStorage.tymojiEmojisType;
   if (emojiType === "emojione") {
