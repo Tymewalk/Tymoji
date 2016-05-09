@@ -9,6 +9,15 @@
 // @grant       GM_getResourceText
 // @resource	configHTML https://raw.githubusercontent.com/Tymewalk/Tymoji/settings/res/settings.html
 // ==/UserScript==
+var setTymojis = function() {
+    GM_setValue("emojisType", "tymoji");
+    console.log("[TYMOJI] Set Emoji Type to Tymoji");
+};
+
+var setEmojiOne = function() {
+    GM_setValue("emojisType", "emojione");
+    console.log("[TYMOJI] Set Emoji Type to EmojiOne");
+};
 
 // Add the settings
 var settingsHTML = GM_getResourceText("configHTML");
@@ -16,7 +25,15 @@ var settingsHTML = GM_getResourceText("configHTML");
 var settingsDiv        = document.createElement('div');
 settingsDiv.innerHTML   = settingsHTML;
 document.body.insertBefore(settingsDiv, document.body.firstChild);
-
+/*
+ $('#tymojiSetter').click(function () {
+     setTymojis();
+ });
+ 
+ $('#emojioneSetter').click(function () {
+     setEmojiOne();
+ });
+*/
 var posts = document.getElementsByClassName( 'post_body_html') ;
 var sigs = document.getElementsByClassName( 'postsignature' );
 /*
@@ -67,8 +84,10 @@ var emojiType = "tymoji";
 var checkerVal = GM_getValue("emojisType", false);
 if (!checkerVal) {
  GM_setValue("emojisType", "tymoji");
-}
+};
+
 var doEmojis = function() {
+  console.log("[TYMOJI] Adding emojis");
   emojiType = GM_getValue("emojisType", "tymoji");
   if (emojiType === "emojione") {
     emojisData = emojioneData;
