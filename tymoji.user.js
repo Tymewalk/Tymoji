@@ -5,7 +5,8 @@
 // @include     https://scratch.mit.edu/discuss/*
 // @match	http://www.example.com/scriptsettingspage/
 // @version     0.1-dev
-// @grant       none
+// @grant       GM_getValue
+// @grant       GM_setValue
 // ==/UserScript==
 var posts = document.getElementsByClassName( 'post_body_html') ;
 var sigs = document.getElementsByClassName( 'postsignature' );
