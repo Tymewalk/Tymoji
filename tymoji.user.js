@@ -9,7 +9,16 @@
 // @grant       GM_getResourceText
 // @resource	configHTML https://raw.githubusercontent.com/Tymewalk/Tymoji/settings/res/settings.html
 // ==/UserScript==
+/*var setTymojis = function() {
+    GM_setValue("tymojiEmojisType", "tymoji");
+    console.log("[TYMOJI] Set Emoji Type to Tymoji");
+};
 
+var setEmojiOne = function() {
+    GM_setValue("tymojiEmojisType", "emojione");
+    console.log("[TYMOJI] Set Emoji Type to EmojiOne");
+};
+*/
 // Add the settings
 var settingsHTML = GM_getResourceText("configHTML");
 
@@ -17,20 +26,21 @@ var settingsDiv        = document.createElement('div');
 settingsDiv.innerHTML   = settingsHTML;
 document.body.insertBefore(settingsDiv, document.body.firstChild);
 /*
- $('#tymojiSetter').click(function () {
+$('#tymojiSetter').click(function () {
+     console.log("SET");
      setTymojis();
- });
+});
  
- $('#emojioneSetter').click(function () {
+$('#emojioneSetter').click(function () {
      setEmojiOne();
- });
+});
 */
 var posts = document.getElementsByClassName( 'post_body_html') ;
 var sigs = document.getElementsByClassName( 'postsignature' );
 /*
 var code = document.getElementsByClassName('code'); // Code blocks
 // Remove all the code blocks from the text to run through
-text = text.filter( function( el ) {
+  var text = text.filter( function( el ) {
   return code.indexOf( el ) < 0;
 } );
 */
@@ -72,14 +82,13 @@ var emojioneData = [
 var emojisData = tymojiData;
 var emojiType = "tymoji";
 
-var checkerVal = GM_getValue("emojisType", false);
-if (!checkerVal) {
- GM_setValue("emojisType", "tymoji");
+if (!localStorage.tymojiEmojisType) {
+  localStorage.tymojiEmojisType = "tymoji";
 };
 
 var doEmojis = function() {
   console.log("[TYMOJI] Adding emojis");
-  emojiType = GM_getValue("emojisType", "tymoji");
+  emojiType = localStorage.tymojiEmojisType
   if (emojiType === "emojione") {
     emojisData = emojioneData;
   } else {
@@ -108,8 +117,3 @@ var doEmojis = function() {
 doEmojis();
 
 //var settingsPopup = $('<div><p>What kind of emojis would you like?</p><button id="tymojiSetter">Tymoji</button><br /><button id="emojioneSetter">EmojiOne</button></div>');
-
-/*$('#showPopUp').click(function () {
-    settingsPopup.dialog();
-});
-*/
