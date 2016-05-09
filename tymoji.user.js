@@ -4,27 +4,17 @@
 // @description Tymewalk's Emojis for use on the Scratch forums. All in one handy userscript.
 // @include     https://scratch.mit.edu/discuss/*
 // @version     0.1-dev
-// @grant       GM_getValue
-// @grant       GM_setValue
 // @grant       GM_getResourceText
 // @resource	configHTML https://raw.githubusercontent.com/Tymewalk/Tymoji/settings/res/settings.html
 // ==/UserScript==
-/*var setTymojis = function() {
-    GM_setValue("tymojiEmojisType", "tymoji");
-    console.log("[TYMOJI] Set Emoji Type to Tymoji");
-};
 
-var setEmojiOne = function() {
-    GM_setValue("tymojiEmojisType", "emojione");
-    console.log("[TYMOJI] Set Emoji Type to EmojiOne");
-};
-*/
 // Add the settings
 var settingsHTML = GM_getResourceText("configHTML");
 
-var settingsDiv        = document.createElement('div');
-settingsDiv.innerHTML   = settingsHTML;
+var settingsDiv = document.createElement('div');
+settingsDiv.innerHTML = settingsHTML;
 document.body.insertBefore(settingsDiv, document.body.firstChild);
+
 /*
 $('#tymojiSetter').click(function () {
      console.log("SET");
@@ -35,8 +25,8 @@ $('#emojioneSetter').click(function () {
      setEmojiOne();
 });
 */
-var posts = document.getElementsByClassName( 'post_body_html') ;
-var sigs = document.getElementsByClassName( 'postsignature' );
+var posts = document.getElementsByClassName('post_body_html');
+var sigs = document.getElementsByClassName('postsignature');
 /*
 var code = document.getElementsByClassName('code'); // Code blocks
 // Remove all the code blocks from the text to run through
@@ -87,7 +77,7 @@ if (!localStorage.tymojiEmojisType) {
   localStorage.tymojiEmojisType = "tymoji";
 };
 
-var doEmojis = function() {
+var addEmojis = function() {
   console.log(localStorage.tymojiEmojisType);
   console.log("[TYMOJI] Adding emojis");
   emojiType = localStorage.tymojiEmojisType;
@@ -97,11 +87,14 @@ var doEmojis = function() {
     emojisData = tymojiData;
   };
 
+  // Loop through every post
   for (var i = 0, l = posts.length; i < l; i++) {
     var el = posts[i];
+    // Now loop through every emoji
     for (var j = 0, n = emojisData.length; j < n; j++) {
       var matching = new RegExp(emojisData[j][0], "g");
       var replaceString = '<img src="' + emojisData[j][1] + '" title="' + emojisData[j][2] + '" width="16" height="16"></img>';
+      // Replace ~emoji~ with an emoji image
       el.innerHTML = el.innerHTML.replace(matching, replaceString);
     };  
   };
@@ -116,6 +109,4 @@ var doEmojis = function() {
   };
 };
 
-doEmojis();
-
-//var settingsPopup = $('<div><p>What kind of emojis would you like?</p><button id="tymojiSetter">Tymoji</button><br /><button id="emojioneSetter">EmojiOne</button></div>');
+addEmojis();
