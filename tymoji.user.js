@@ -6,13 +6,16 @@
 // @version     0.1-dev
 // @grant       GM_getValue
 // @grant       GM_setValue
+// @grant       GM_getResourceText
 // @resource	configHTML https://raw.githubusercontent.com/Tymewalk/Tymoji/settings/res/settings.html
 // ==/UserScript==
 
 // Add the settings
-var settingsHTML         = document.createElement('div');
-//settingsHTML.innerHTML   = GM_getResourceText("configHTML");
-document.body.insertBefore(settingsHTML, document.body.firstChild);
+var settingsHTML = GM_getResourceText("configHTML");
+
+var settingsDiv        = document.createElement('div');
+settingsDiv.innerHTML   = settingsHTML;
+document.body.insertBefore(settingsDiv, document.body.firstChild);
 
 var posts = document.getElementsByClassName( 'post_body_html') ;
 var sigs = document.getElementsByClassName( 'postsignature' );
