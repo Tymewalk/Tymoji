@@ -1,0 +1,14 @@
+<script>
+ var setTymojis = function() {
+     localStorage.tymojiEmojisType = "tymoji";
+     console.log("[TYMOJI] Set Emoji Type to Tymoji");
+ };
+
+ var setEmojiOne = function() {
+     localStorage.tymojiEmojisType = "emojione";
+ };
+</script>
+<p>Tymoji Settings</p>
+<button id="tymojiSetter" onclick="console.log('Clicked Tymojis')">Use Tymojis</button>
+<br />
+<button id="emojioneSetter" onclick="setEmojiOne()">Use EmojiOne</button>
