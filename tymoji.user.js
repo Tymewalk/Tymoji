@@ -3,7 +3,6 @@
 // @namespace   https://scratch.mit.edu/users/Tymewalk
 // @description Tymewalk's Emojis for use on the Scratch forums. All in one handy userscript.
 // @include     https://scratch.mit.edu/discuss/*
-// @match	http://www.example.com/scriptsettingspage/
 // @version     0.1-dev
 // @grant       GM_getValue
 // @grant       GM_setValue
@@ -54,11 +53,11 @@ var emojioneData = [
 
 var emojisData = tymojiData;
 var emojiType = "tymoji";
-//if !GM_getValue("emojisType", false) {
-// GM_setValue("emojisType", "tymoji");
-//}
+if !GM_getValue("emojisType", false) {
+ GM_setValue("emojisType", "tymoji");
+}
 var doEmojis = function() {
-  emojiType = "emojione";//GM_getValue("emojisType", "tymoji");
+  emojiType = GM_getValue("emojisType", "tymoji");
   if (emojiType === "emojione") {
     emojisData = emojioneData;
   } else {
