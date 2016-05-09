@@ -107,22 +107,3 @@ $('#tymojiSetter').click(function () {
 $('#emojioneSetter').click(function () {
     GM_setValue("emojisType", "emojione");
 });
-
-// Thanks to @scratchyone on Scratch for writing this! :)
-var makeSettings = function() {
-    //localStorage.removeItem("settings");
-    if( location.href != "http://www.example.com/scriptsettingspage/" ) {
-     if(localStorage.getItem("settings")||"empty"=="empty") {
-      var settingsHTML = document.createElement('div');
-      settingsHTML.innerHTML = "<h1><a href='#' onclick='localStorage.setItem(\"settings\", \"true\");localStorage.getItem(\"settings\");window.open(\"http://www.example.com/scriptsettingspage/\")'>Settings</a></h1>";
-      document.body.appendChild(settingsHTML);
-      
-     }
-     document.body.style.fontSize="2em";
-    }
-    if(location.href=="http://www.example.com/scriptsettingspage/") {
-        document.write("<h1>Settings Page</h1>");
-    }
-}
-
-makeSettings();
