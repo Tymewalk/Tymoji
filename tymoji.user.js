@@ -53,7 +53,9 @@ var emojioneData = [
 
 var emojisData = tymojiData;
 var emojiType = "tymoji";
-if !GM_getValue("emojisType", false) {
+
+var checkerVal = GM_getValue("emojisType", false);
+if (!checkerVal) {
  GM_setValue("emojisType", "tymoji");
 }
 var doEmojis = function() {
