@@ -61,19 +61,19 @@ var tymojiData = [
 
 var emojioneData = [
  ["~slight_smile~", "http://emojione.com/wp-content/uploads/assets/emojis/1f642.svg", "~slight_smile~"], // For testing
- ["~slight_frown~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/slight_frown.png", "~slight_frown~"],  
- ["~upside_down~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/upside_down.png", "~upside_down~"], 
- ["~no_mouth~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/no_mouth.png", "~no_mouth~"],  
- ["~rage~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/rage.png", "~rage~"],  
- ["~open_mouth~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/open_mouth.png", "~open_mouth~"],  
- ["~stuck_out_tongue~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/stuck_out_tongue.png", "~stuck_out_tongue~"],
+ ["~slight_frown~", "http://emojione.com/wp-content/uploads/assets/emojis/1f641.svg", "~slight_frown~"],  
+ ["~upside_down~", "http://emojione.com/wp-content/uploads/assets/emojis/1f643.svg", "~upside_down~"], 
+ ["~no_mouth~", "http://emojione.com/wp-content/uploads/assets/emojis/1f636.svg", "~no_mouth~"],  
+ ["~rage~", "http://emojione.com/wp-content/uploads/assets/emojis/1f621.svg", "~rage~"],  
+ ["~open_mouth~", "http://emojione.com/wp-content/uploads/assets/emojis/1f62e.svg", "~open_mouth~"],  
+ ["~stuck_out_tongue~", "http://emojione.com/wp-content/uploads/assets/emojis/1f61b.svg", "~stuck_out_tongue~"],
  ["~cry~", "http://emojione.com/wp-content/uploads/assets/emojis/1f622.svg", "~cry~"],
- ["~stuck_out_tongue_winking_eye~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/stuck_out_tongue_winking_eye.png", "~stuck_out_tongue_winking_eye~"],
- ["~money_mouth~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/money_mouth.png", "~money_mouth~"],
- ["~sleeping~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/sleeping.png", "~sleeping~"],
- ["~wink~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/wink.png", "~wink~"],
+ ["~stuck_out_tongue_winking_eye~", "http://emojione.com/wp-content/uploads/assets/emojis/1f61c.svg", "~stuck_out_tongue_winking_eye~"],
+ ["~money_mouth~", "http://emojione.com/wp-content/uploads/assets/emojis/1f911.svg", "~money_mouth~"],
+ ["~sleeping~", "http://emojione.com/wp-content/uploads/assets/emojis/1f634.svg", "~sleeping~"],
+ ["~wink~", "http://emojione.com/wp-content/uploads/assets/emojis/1f609.svg", "~wink~"],
  ["~package~", "http://emojione.com/wp-content/uploads/assets/emojis/1f4e6.svg", "~package~"],
- ["~yum~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/yum.png", "~yum~"],
+ ["~yum~", "http://emojione.com/wp-content/uploads/assets/emojis/1f60b.svg", "~yum~"],
 ];
 
 var emojisData = tymojiData;
