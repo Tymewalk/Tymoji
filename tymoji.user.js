@@ -42,12 +42,12 @@ var emojioneData = [
  ["~rage~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/rage.png", "~rage~"],  
  ["~open_mouth~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/open_mouth.png", "~open_mouth~"],  
  ["~stuck_out_tongue~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/stuck_out_tongue.png", "~stuck_out_tongue~"],
- ["~cry~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/cry.png", "~cry~"],
+ ["~cry~", "http://emojione.com/wp-content/uploads/assets/emojis/1f622.svg", "~cry~"],
  ["~stuck_out_tongue_winking_eye~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/stuck_out_tongue_winking_eye.png", "~stuck_out_tongue_winking_eye~"],
  ["~money_mouth~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/money_mouth.png", "~money_mouth~"],
  ["~sleeping~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/sleeping.png", "~sleeping~"],
  ["~wink~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/wink.png", "~wink~"],
- ["~package~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/package.png", "~package~"],
+ ["~package~", "http://emojione.com/wp-content/uploads/assets/emojis/1f4e6.svg", "~package~"],
  ["~yum~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/yum.png", "~yum~"],
 ];
 
