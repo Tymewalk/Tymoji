@@ -87,8 +87,9 @@ if (!localStorage.tymojiEmojisType) {
 };
 
 var doEmojis = function() {
+  console.log(localStorage.tymojiEmojisType);
   console.log("[TYMOJI] Adding emojis");
-  emojiType = localStorage.tymojiEmojisType
+  emojiType = localStorage.tymojiEmojisType;
   if (emojiType === "emojione") {
     emojisData = emojioneData;
   } else {

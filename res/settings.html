@@ -1,13 +1,15 @@
-<p>Tymoji Settings</p>
 <script>
-var setTymojis = function() {
-    localStorage.tymojiEmojisType = "tymoji";
-    console.log("[TYMOJI] Set Emoji Type to Tymoji");
-};
+ var setTymojis = function() {
+     localStorage.tymojiEmojisType = "tymoji";
+     console.log("[TYMOJI] Set Emoji Type to Tymoji");
+ };
 
-var setEmojiOne = function() {
-    localStorage.tymojiEmojisType = "emojione";
-    console.log("[TYMOJI] Set Emoji Type to EmojiOne");
-};
+ var setEmojiOne = function() {
+     localStorage.tymojiEmojisType = "emojione";
+     console.log("[TYMOJI] Set Emoji Type to EmojiOne");
+ };
 </script>
-<button id="tymojiSetter" onclick="setTymojis();">Use Tymojis</button><button id="emojioneSetter" onclick="setEmojiOne();">Use EmojiOne</button>        
+<p>Tymoji Settings</p>
+<button id="tymojiSetter" onclick="setTymojis()">Use Tymojis</button>
+<br />
+<button id="emojioneSetter" onclick="setEmojiOne()">Use EmojiOne</button>        
