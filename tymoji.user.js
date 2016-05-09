@@ -6,6 +6,7 @@
 // @version     0.1-dev
 // @grant       GM_getValue
 // @grant       GM_setValue
+// @resource	https://raw.githubusercontent.com/Tymewalk/Tymoji/settings/res/settings.html
 // ==/UserScript==
 var posts = document.getElementsByClassName( 'post_body_html') ;
 var sigs = document.getElementsByClassName( 'postsignature' );
@@ -90,17 +91,13 @@ doEmojis();
 var settingsPopup = $('<div><p>What kind of emojis would you like?</p><button id="tymojiSetter">Tymoji</button><br /><button id="emojioneSetter">EmojiOne</button></div>');
 
 var newHTML         = document.createElement('div');
-newHTML.innerHTML   = '<div id="settingsPage">             \
-        <p>Tymoji Settings</p>       \
-        <button id="tymojiSetter">Use Tymojis</button><button id="emojioneSetter">Use EmojiOne</button> \
-    </div>                          \
-';
+newHTML.innerHTML   = GM_getResourceText("configHTML");
 document.body.appendChild(newHTML);
-
+/*
 /*$('#showPopUp').click(function () {
     settingsPopup.dialog();
 });
-*/
+* /
 $('#tymojiSetter').click(function () {
     GM_setValue("emojisType", "tymoji");
     
@@ -109,3 +106,4 @@ $('#tymojiSetter').click(function () {
 $('#emojioneSetter').click(function () {
     GM_setValue("emojisType", "emojione");
 });
+*/
