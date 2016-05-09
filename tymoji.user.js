@@ -9,15 +9,6 @@
 // @grant       GM_getResourceText
 // @resource	configHTML https://raw.githubusercontent.com/Tymewalk/Tymoji/settings/res/settings.html
 // ==/UserScript==
-var setTymojis = function() {
-    GM_setValue("emojisType", "tymoji");
-    console.log("[TYMOJI] Set Emoji Type to Tymoji");
-};
-
-var setEmojiOne = function() {
-    GM_setValue("emojisType", "emojione");
-    console.log("[TYMOJI] Set Emoji Type to EmojiOne");
-};
 
 // Add the settings
 var settingsHTML = GM_getResourceText("configHTML");
