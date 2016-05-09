@@ -8,29 +8,31 @@
 // @resource	configHTML https://raw.githubusercontent.com/Tymewalk/Tymoji/settings/res/settings.html
 // ==/UserScript==
 
+var tymojiSettings = document.createElement("div");
+tymojiSettings.innerHTML = "<p>Tymoji Settings</p>";
+document.body.appendChild(tymojiSettings, document.body.firstChild);
 
-
- var setTymojis = function() {
-     localStorage.tymojiEmojisType = "tymoji";
-     console.log("[TYMOJI] Set Emoji Type to Tymoji");
- };
+var setTymojis = function() {
+    localStorage.tymojiEmojisType = "tymoji";
+    console.log("[TYMOJI] Set Emoji Type to Tymoji");
+};
 
 var tymojiButton = document.createElement("input");
 tymojiButton.type="button";
 tymojiButton.value="Use Tymojis";
 tymojiButton.onclick = setTymojis;
-document.body.insertBefore(tymojiButton, document.body.firstChild);
+document.body.appendChild(tymojiButton);
 
- var setEmojiOne = function() {
-     localStorage.tymojiEmojisType = "emojione";
-     console.log("[TYMOJI] Set Emoji Type to EmojiOne");
- };
+var setEmojiOne = function() {
+    localStorage.tymojiEmojisType = "emojione";
+    console.log("[TYMOJI] Set Emoji Type to EmojiOne");
+};
 
 var emojiOneButton = document.createElement("input");
 emojiOneButton.type="button";
 emojiOneButton.value="Use EmojiOne";
 emojiOneButton.onclick = setEmojiOne;
-document.body.insertBefore(emojiOneButton, document.body.firstChild);
+document.body.appendChild(emojiOneButton);
 // Add the settings
 var settingsHTML = GM_getResourceText("configHTML");
 
