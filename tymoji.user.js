@@ -8,7 +8,7 @@
 
 var tymojiSettings = document.createElement("div");
 tymojiSettings.innerHTML = "<p>Tymoji Settings</p>";
-document.body.appendChild(tymojiSettings, document.body.firstChild);
+document.body.appendChild(tymojiSettings);
 
 var setTymojis = function() {
     localStorage.tymojiEmojisType = "tymoji";
