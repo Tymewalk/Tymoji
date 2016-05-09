@@ -83,6 +83,7 @@ var emojisData = tymojiData;
 var emojiType = "tymoji";
 
 if (!localStorage.tymojiEmojisType) {
+  console.log("[TYMOJI] Setting localStorage emoji type to Tymoji for first-time setup");
   localStorage.tymojiEmojisType = "tymoji";
 };
 
