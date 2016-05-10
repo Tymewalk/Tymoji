@@ -9,6 +9,7 @@
 var posts = document.getElementsByClassName('post_body_html');
 var sigs = document.getElementsByClassName('postsignature');
 var code = document.getElementsByClassName('code'); // Code blocks
+/* // Disabled due to problems.
 // Remove all the code blocks from the text to run through
 var posts = posts.filter( function( el ) {
   return code.indexOf( el ) < 0;
@@ -16,6 +17,7 @@ var posts = posts.filter( function( el ) {
 var sigs = sigs.filter( function( el ) {
   return code.indexOf( el ) < 0;
 } );
+*/
 
 var tymojiData = [
  ["~slight_smile~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/slight_smile.png", "~slight_smile~"], 
