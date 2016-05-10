@@ -57,6 +57,11 @@ var tymojiData = [
  ["~wink~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/wink.png", "~wink~"],
  ["~package~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/package.png", "~package~"],
  ["~yum~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/yum.png", "~yum~"],
+ ["~frowning2~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/frowning2.png", "~yum~"],
+ ["~grinning~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/grinning.png", "~grinning~"],
+ ["~frowning~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/frowning.png", "~frowning~"],
+ ["~angry~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/angry.png", "~angry~"],
+ ["~hushed~", "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/hushed.png", "~hushed~"],
 ];
 
 var emojioneData = [
@@ -74,6 +79,11 @@ var emojioneData = [
  ["~wink~", "http://emojione.com/wp-content/uploads/assets/emojis/1f609.svg", "~wink~"],
  ["~package~", "http://emojione.com/wp-content/uploads/assets/emojis/1f4e6.svg", "~package~"],
  ["~yum~", "http://emojione.com/wp-content/uploads/assets/emojis/1f60b.svg", "~yum~"],
+ ["~frowning2~", "http://emojione.com/wp-content/uploads/assets/emojis/2639.svg", "~frowning2~"],
+ ["~grinning~", "http://emojione.com/wp-content/uploads/assets/emojis/1f600.svg", "~grinning~"],
+ ["~frowning~", "http://emojione.com/wp-content/uploads/assets/emojis/1f626.svg", "~frowning~"],
+ ["~angry~", "http://emojione.com/wp-content/uploads/assets/emojis/1f620.svg", "~angry~"],
+ ["~hushed~", "http://emojione.com/wp-content/uploads/assets/emojis/1f62f.svg", "~hushed~"],
 ];
 
 var emojisData = tymojiData;
