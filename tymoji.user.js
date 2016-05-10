@@ -6,32 +6,6 @@
 // @version     0.1-dev
 // ==/UserScript==
 
-var tymojiSettings = document.createElement("div");
-tymojiSettings.innerHTML = "<p>Tymoji Settings</p>";
-document.body.appendChild(tymojiSettings);
-
-var setTymojis = function() {
-    localStorage.tymojiEmojisType = "tymoji";
-    console.log("[TYMOJI] Set Emoji Type to Tymoji");
-};
-
-var tymojiButton = document.createElement("input");
-tymojiButton.type="button";
-tymojiButton.value="Use Tymojis";
-tymojiButton.onclick = setTymojis;
-document.body.appendChild(tymojiButton);
-
-var setEmojiOne = function() {
-    localStorage.tymojiEmojisType = "emojione";
-    console.log("[TYMOJI] Set Emoji Type to EmojiOne");
-};
-
-var emojiOneButton = document.createElement("input");
-emojiOneButton.type="button";
-emojiOneButton.value="Use EmojiOne";
-emojiOneButton.onclick = setEmojiOne;
-document.body.appendChild(emojiOneButton);
-
 var posts = document.getElementsByClassName('post_body_html');
 var sigs = document.getElementsByClassName('postsignature');
 /*
@@ -126,3 +100,31 @@ var addEmojis = function() {
 };
 
 addEmojis();
+
+var tymojiSettings = document.createElement("div");
+tymojiSettings.innerHTML = "<p>Tymoji Settings</p>";
+document.body.appendChild(tymojiSettings);
+
+var setTymojis = function() {
+    localStorage.tymojiEmojisType = "tymoji";
+    addEmojis();
+    console.log("[TYMOJI] Set Emoji Type to Tymoji");
+};
+
+var tymojiButton = document.createElement("input");
+tymojiButton.type="button";
+tymojiButton.value="Use Tymojis";
+tymojiButton.onclick = setTymojis;
+document.body.appendChild(tymojiButton);
+
+var setEmojiOne = function() {
+    localStorage.tymojiEmojisType = "emojione";
+    addEmojis();
+    console.log("[TYMOJI] Set Emoji Type to EmojiOne");
+};
+
+var emojiOneButton = document.createElement("input");
+emojiOneButton.type="button";
+emojiOneButton.value="Use EmojiOne";
+emojiOneButton.onclick = setEmojiOne;
+document.body.appendChild(emojiOneButton);
