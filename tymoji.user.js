@@ -8,8 +8,9 @@
 
 var posts = document.getElementsByClassName('post_body_html');
 var sigs = document.getElementsByClassName('postsignature');
-var code = document.getElementsByClassName('code'); // Code blocks
-/* // Disabled due to problems.
+
+/*var code = document.getElementsByClassName('code'); // Code blocks
+// Disabled due to problems.
 // Remove all the code blocks from the text to run through
 var posts = posts.filter( function( el ) {
   return code.indexOf( el ) < 0;
