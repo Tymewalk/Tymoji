@@ -24,3 +24,8 @@ When you type `~smile~`, it gets auto-replaced with a Tymoji smile. Neat, huh?
     ~wink~ - Winking face
     ~package~ - Package
     ~yum~ - Face savouring food
+    ~frowning2~ - Frowning face
+    ~grinning~ - Grinning face
+    ~frowning~ - Frowning face with mouth open
+    ~angry~ - Angry face
+    ~hushed~ - Hushed face
