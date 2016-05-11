@@ -44,7 +44,7 @@ var tymojiData = [
 ];
 
 var emojioneData = [
- ["~slight_smile~", "http://emojione.com/wp-content/uploads/assets/emojis/1f642.svg", "~slight_smile~"], // For testing
+ ["~slight_smile~", "http://emojione.com/wp-content/uploads/assets/emojis/1f642.svg", "~slight_smile~"],
  ["~slight_frown~", "http://emojione.com/wp-content/uploads/assets/emojis/1f641.svg", "~slight_frown~"],  
  ["~upside_down~", "http://emojione.com/wp-content/uploads/assets/emojis/1f643.svg", "~upside_down~"], 
  ["~no_mouth~", "http://emojione.com/wp-content/uploads/assets/emojis/1f636.svg", "~no_mouth~"],  
@@ -74,7 +74,7 @@ if (!localStorage.tymojiEmojisType) {
 };
 
 var addEmojis = function() {
-  console.log("[TYMOJI] Adding emojis");
+  console.log("[TYMOJI] Adding emojis to page");
   emojiType = localStorage.tymojiEmojisType;
   if (emojiType === "emojione") {
     emojisData = emojioneData;
@@ -94,6 +94,7 @@ var addEmojis = function() {
     };  
   };
 
+  // Do the same for signatures
   for (var i = 0, l = sigs.length; i < l; i++) {
     var el = sigs[i];
     for (var j = 0, n = emojisData.length; j < n; j++) {
@@ -106,6 +107,7 @@ var addEmojis = function() {
 
 addEmojis();
 
+// Create the settings
 var tymojiSettings = document.createElement("div");
 tymojiSettings.innerHTML = "<p>Tymoji Settings</p>";
 document.body.appendChild(tymojiSettings);
