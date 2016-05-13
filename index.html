@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tymoji</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+    
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <img src="https://avatars2.githubusercontent.com/u/17463099?v=3&s=460" width="50px">
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#" >Home</a></li>
+            <li><a href="#Install" >Install</a></li>
+            <li><a href="#Use" >Use</a></li>
+            <li><a href="#Bugs" >Bugs</a></li>
+            <li><a href="#Contact" >Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/Tymewalk/Tymoji/"><span class="glyphicon glyphicon-github"></span> GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div style="height: 50px"></div>
+    <div class="container-fluid text-center">
+      <div class="row content" >
+        
+        <div class="col-sm-12 text-left">
+          
+          <div id="Home">
+            <h1>What is Tymoji?</h1>
+            <p>Tymewalk's Emojis for use on the Scratch forums. All in one handy userscript.</p>
+            <p>Many Scratchers want to have more smilies and emojis on the Scratch Forums. But since there are far more pressing issues (such as security), emojis are very low on the list of things that need to be added.
+              Enter Tymoji. Tymoji allows you to insert emojis in the Scratch forums as simple as typing ~smile~.
+            When you type ~smile~, it gets auto-replaced with a Tymoji smile. Neat, huh?</p>
+            <hr>
+          </div>
+          <div id="Install" >
+            <h1>Install</h1>
+            <p>To install please have tampermonkey installed on your machine! After you have install Tampermonkey. <a href="https://github.com/Tymewalk/Tymoji/raw/master/tymoji.user.js">Click here!</a>
+          </p>
+          <hr>
+        </div>
+        <div id="Use" >
+          <h1>Use</h1>
+          <p>To use just type some of the text below!</p>
+          <div>~slight_smile~ - Smiling Face<br>
+            ~slight_frown~ - Frowning Face<br>
+            ~upside_down~ - Upside-Down Smiling Face<br>
+            ~no_mouth~ - Face with no mouth<br>
+            ~rage~ - Angry frowning face<br>
+            ~open_mouth~ - Face with open mouth<br>
+            ~stuck_out_tongue~ - Smiling Face with tongue stuck out<br>
+            ~cry~ - Frowning Face with tear<br>
+            ~stuck_out_tongue_winking_face~ - Smiling face winking with tongue stuck out<br>
+            ~money_mouth~ - Money face with money mouth (yes it's a real Unicode)<br>
+            ~sleeping~ - Sleeping face<br>
+            ~wink~ - Winking face<br>
+            ~package~ - Package<br>
+            ~yum~ - Face savouring food<br>
+            ~frowning2~ - Frowning face<br>
+            ~grinning~ - Grinning face<br>
+            ~frowning~ - Frowning face with mouth open<br>
+            ~angry~ - Angry face<br>
+          ~hushed~ - Hushed face</div>
+          <hr>
+        </div>
+        <div id="Bugs">
+          <h1>Bugs</h1>
+          <p>If you find a bug please report it <a href="https://github.com/Tymewalk/Tymoji/issues/new">here!</a></p>
+          <hr>
+        </div>
+        <div id="Contact">
+          <h1>Contact</h1>
+          <p>To contact Tymewalk please go to <a href="https://scratch.mit.edu/users/Tymewalk/">This Page!</a></p>
+          <hr>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+<br><br><br>
+<div style="height: 5%;"></div>
+<script type="text/javascript">
+
+$(function() {
+$('a[href*="#"]:not([href="#"])').click(function() {
+if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+var target = $(this.hash);
+target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+if (target.length) {
+$('html, body').animate({
+scrollTop: target.offset().top
+}, 1000);
+return false;
+}
+}
+});
+});
+
+function change(data) {
+var dataHTML = document.getElementById(data).innerHTML;
+document.getElementById("Data").innerHTML = dataHTML;
+return dataHTML;
+}
+function redirectHttpToHttps()
+{
+var httpURL= window.location.hostname + window.location.pathname + window.location.search;
+var httpsURL= "http://" + httpURL;
+window.location = httpsURL;
+}
+
+</script>
+</body>
+</html>
