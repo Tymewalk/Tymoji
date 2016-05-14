@@ -20,9 +20,9 @@ var sigs = sigs.filter( function( el ) {
   return code.indexOf( el ) < 0;
 } );
 */
-
+var tymojiURL = "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/";
 var tymojiData = [
- ["~slight_smile~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/slight_smile.png", "~slight_smile~"], 
+ ["~slight_smile~", tymojiUR+"slight_smile.png", "~slight_smile~"], 
  ["~slight_frown~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/slight_frown.png", "~slight_frown~"],  
  ["~upside_down~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/upside_down.png", "~upside_down~"], 
  ["~no_mouth~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/no_mouth.png", "~no_mouth~"],  
