@@ -4,7 +4,7 @@
 // @description Tymewalk's Emojis for use on the Scratch forums. All in one handy userscript.
 // @include     http://scratch.mit.edu/discuss/*
 // @include     https://scratch.mit.edu/discuss/*
-// @version     0.1-dev
+// @version     0.3-dev
 // ==/UserScript==
 
 var posts = document.getElementsByClassName('post_body_html');
@@ -23,24 +23,24 @@ var sigs = sigs.filter( function( el ) {
 var tymojiURL = "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/";
 var tymojiData = [
  ["~slight_smile~", tymojiURL+"slight_smile.png", "~slight_smile~"], 
- ["~slight_frown~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/slight_frown.png", "~slight_frown~"],  
- ["~upside_down~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/upside_down.png", "~upside_down~"], 
- ["~no_mouth~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/no_mouth.png", "~no_mouth~"],  
- ["~rage~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/rage.png", "~rage~"],  
- ["~open_mouth~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/open_mouth.png", "~open_mouth~"],  
- ["~stuck_out_tongue~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/stuck_out_tongue.png", "~stuck_out_tongue~"],
- ["~cry~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/cry.png", "~cry~"],
- ["~stuck_out_tongue_winking_eye~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/stuck_out_tongue_winking_eye.png", "~stuck_out_tongue_winking_eye~"],
- ["~money_mouth~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/money_mouth.png", "~money_mouth~"],
- ["~sleeping~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/sleeping.png", "~sleeping~"],
- ["~wink~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/wink.png", "~wink~"],
- ["~package~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/package.png", "~package~"],
- ["~yum~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/yum.png", "~yum~"],
- ["~frowning2~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/frowning2.png", "~yum~"],
- ["~grinning~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/grinning.png", "~grinning~"],
- ["~frowning~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/frowning.png", "~frowning~"],
- ["~angry~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/angry.png", "~angry~"],
- ["~hushed~", "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/hushed.png", "~hushed~"],
+ ["~slight_frown~", tymojiURL+"slight_frown.png", "~slight_frown~"],  
+ ["~upside_down~", tymojiURL+"upside_down.png", "~upside_down~"], 
+ ["~no_mouth~", tymojiURL+"no_mouth.png", "~no_mouth~"],  
+ ["~rage~", tymojiURL+"rage.png", "~rage~"],  
+ ["~open_mouth~", tymojiURL+"open_mouth.png", "~open_mouth~"],  
+ ["~stuck_out_tongue~", tymojiURL+"stuck_out_tongue.png", "~stuck_out_tongue~"],
+ ["~cry~", tymojiURL+"cry.png", "~cry~"],
+ ["~stuck_out_tongue_winking_eye~", tymojiURL+"stuck_out_tongue_winking_eye.png", "~stuck_out_tongue_winking_eye~"],
+ ["~money_mouth~", tymojiURL+"money_mouth.png", "~money_mouth~"],
+ ["~sleeping~", tymojiURL+"sleeping.png", "~sleeping~"],
+ ["~wink~", tymojiURL+"wink.png", "~wink~"],
+ ["~package~", tymojiURL+"package.png", "~package~"],
+ ["~yum~", tymojiURL+"yum.png", "~yum~"],
+ ["~frowning2~", tymojiURL+"frowning2.png", "~yum~"],
+ ["~grinning~", tymojiURL+"grinning.png", "~grinning~"],
+ ["~frowning~", tymojiURL+"frowning.png", "~frowning~"],
+ ["~angry~", tymojiURL+"angry.png", "~angry~"],
+ ["~hushed~", tymojiURL+"hushed.png", "~hushed~"],
 ];
 
 var emojioneData = [
