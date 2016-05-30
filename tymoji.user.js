@@ -118,7 +118,7 @@ document.body.appendChild(tymojiSettings);
 
 var setTymojis = function() {
     localStorage.tymojiEmojisType = "tymoji";
-    addEmojis();
+    //addEmojis();
     console.log("[TYMOJI] Set Emoji Type to Tymoji");
 };
 
@@ -130,7 +130,7 @@ document.body.appendChild(tymojiButton);
 
 var setEmojiOne = function() {
     localStorage.tymojiEmojisType = "emojione";
-    addEmojis();
+    //addEmojis();
     console.log("[TYMOJI] Set Emoji Type to EmojiOne");
 };
 
