@@ -22,51 +22,53 @@ var sigs = sigs.filter( function( el ) {
 */
 var tymojiURL = "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/";
 var tymojiData = [
- ["~slight_smile~", tymojiURL+"slight_smile.png", "~slight_smile~"], 
- ["~slight_frown~", tymojiURL+"slight_frown.png", "~slight_frown~"],  
- ["~upside_down~", tymojiURL+"upside_down.png", "~upside_down~"], 
- ["~no_mouth~", tymojiURL+"no_mouth.png", "~no_mouth~"],  
- ["~rage~", tymojiURL+"rage.png", "~rage~"],  
- ["~open_mouth~", tymojiURL+"open_mouth.png", "~open_mouth~"],  
- ["~stuck_out_tongue~", tymojiURL+"stuck_out_tongue.png", "~stuck_out_tongue~"],
- ["~cry~", tymojiURL+"cry.png", "~cry~"],
- ["~stuck_out_tongue_winking_eye~", tymojiURL+"stuck_out_tongue_winking_eye.png", "~stuck_out_tongue_winking_eye~"],
- ["~money_mouth~", tymojiURL+"money_mouth.png", "~money_mouth~"],
- ["~sleeping~", tymojiURL+"sleeping.png", "~sleeping~"],
- ["~wink~", tymojiURL+"wink.png", "~wink~"],
- ["~package~", tymojiURL+"package.png", "~package~"],
- ["~yum~", tymojiURL+"yum.png", "~yum~"],
- ["~frowning2~", tymojiURL+"frowning2.png", "~yum~"],
- ["~grinning~", tymojiURL+"grinning.png", "~grinning~"],
- ["~frowning~", tymojiURL+"frowning.png", "~frowning~"],
- ["~angry~", tymojiURL+"angry.png", "~angry~"],
- ["~hushed~", tymojiURL+"hushed.png", "~hushed~"],
+ ["~slight_smile~", "slight_smile.png", "~slight_smile~"], 
+ ["~slight_frown~", "slight_frown.png", "~slight_frown~"],  
+ ["~upside_down~", "upside_down.png", "~upside_down~"], 
+ ["~no_mouth~", "no_mouth.png", "~no_mouth~"],  
+ ["~rage~", "rage.png", "~rage~"],  
+ ["~open_mouth~", "open_mouth.png", "~open_mouth~"],  
+ ["~stuck_out_tongue~", "stuck_out_tongue.png", "~stuck_out_tongue~"],
+ ["~cry~", "cry.png", "~cry~"],
+ ["~stuck_out_tongue_winking_eye~", "stuck_out_tongue_winking_eye.png", "~stuck_out_tongue_winking_eye~"],
+ ["~money_mouth~", "money_mouth.png", "~money_mouth~"],
+ ["~sleeping~", "sleeping.png", "~sleeping~"],
+ ["~wink~", "wink.png", "~wink~"],
+ ["~package~", "package.png", "~package~"],
+ ["~yum~", "yum.png", "~yum~"],
+ ["~frowning2~", "frowning2.png", "~yum~"],
+ ["~grinning~", "grinning.png", "~grinning~"],
+ ["~frowning~", "frowning.png", "~frowning~"],
+ ["~angry~", "angry.png", "~angry~"],
+ ["~hushed~", "hushed.png", "~hushed~"],
 ];
 
+var emojioneURL = "http://emojione.com/wp-content/uploads/assets/emojis/";
 var emojioneData = [
- ["~slight_smile~", "http://emojione.com/wp-content/uploads/assets/emojis/1f642.svg", "~slight_smile~"],
- ["~slight_frown~", "http://emojione.com/wp-content/uploads/assets/emojis/1f641.svg", "~slight_frown~"],  
- ["~upside_down~", "http://emojione.com/wp-content/uploads/assets/emojis/1f643.svg", "~upside_down~"], 
- ["~no_mouth~", "http://emojione.com/wp-content/uploads/assets/emojis/1f636.svg", "~no_mouth~"],  
- ["~rage~", "http://emojione.com/wp-content/uploads/assets/emojis/1f621.svg", "~rage~"],  
- ["~open_mouth~", "http://emojione.com/wp-content/uploads/assets/emojis/1f62e.svg", "~open_mouth~"],  
- ["~stuck_out_tongue~", "http://emojione.com/wp-content/uploads/assets/emojis/1f61b.svg", "~stuck_out_tongue~"],
- ["~cry~", "http://emojione.com/wp-content/uploads/assets/emojis/1f622.svg", "~cry~"],
- ["~stuck_out_tongue_winking_eye~", "http://emojione.com/wp-content/uploads/assets/emojis/1f61c.svg", "~stuck_out_tongue_winking_eye~"],
- ["~money_mouth~", "http://emojione.com/wp-content/uploads/assets/emojis/1f911.svg", "~money_mouth~"],
- ["~sleeping~", "http://emojione.com/wp-content/uploads/assets/emojis/1f634.svg", "~sleeping~"],
- ["~wink~", "http://emojione.com/wp-content/uploads/assets/emojis/1f609.svg", "~wink~"],
- ["~package~", "http://emojione.com/wp-content/uploads/assets/emojis/1f4e6.svg", "~package~"],
- ["~yum~", "http://emojione.com/wp-content/uploads/assets/emojis/1f60b.svg", "~yum~"],
- ["~frowning2~", "http://emojione.com/wp-content/uploads/assets/emojis/2639.svg", "~frowning2~"],
- ["~grinning~", "http://emojione.com/wp-content/uploads/assets/emojis/1f600.svg", "~grinning~"],
- ["~frowning~", "http://emojione.com/wp-content/uploads/assets/emojis/1f626.svg", "~frowning~"],
- ["~angry~", "http://emojione.com/wp-content/uploads/assets/emojis/1f620.svg", "~angry~"],
- ["~hushed~", "http://emojione.com/wp-content/uploads/assets/emojis/1f62f.svg", "~hushed~"],
+ ["~slight_smile~", "1f642.svg", "~slight_smile~"],
+ ["~slight_frown~", "1f641.svg", "~slight_frown~"],  
+ ["~upside_down~", "1f643.svg", "~upside_down~"], 
+ ["~no_mouth~", "1f636.svg", "~no_mouth~"],  
+ ["~rage~", "1f621.svg", "~rage~"],  
+ ["~open_mouth~", "1f62e.svg", "~open_mouth~"],  
+ ["~stuck_out_tongue~", "1f61b.svg", "~stuck_out_tongue~"],
+ ["~cry~", "1f622.svg", "~cry~"],
+ ["~stuck_out_tongue_winking_eye~", "1f61c.svg", "~stuck_out_tongue_winking_eye~"],
+ ["~money_mouth~", "1f911.svg", "~money_mouth~"],
+ ["~sleeping~", "1f634.svg", "~sleeping~"],
+ ["~wink~", "1f609.svg", "~wink~"],
+ ["~package~", "1f4e6.svg", "~package~"],
+ ["~yum~", "1f60b.svg", "~yum~"],
+ ["~frowning2~", "2639.svg", "~frowning2~"],
+ ["~grinning~", "1f600.svg", "~grinning~"],
+ ["~frowning~", "1f626.svg", "~frowning~"],
+ ["~angry~", "1f620.svg", "~angry~"],
+ ["~hushed~", "1f62f.svg", "~hushed~"],
 ];
 
 var emojisData = tymojiData;
 var emojiType = "tymoji";
+var emojiURL = tymojiURL;
 
 if (!localStorage.tymojiEmojisType) {
   console.log("[TYMOJI] Setting localStorage emoji type to Tymoji for first-time setup");
@@ -77,18 +79,20 @@ var addEmojis = function() {
   console.log("[TYMOJI] Adding emojis to page");
   emojiType = localStorage.tymojiEmojisType;
   if (emojiType === "emojione") {
-    emojisData = emojioneData;
-  } else {
-    emojisData = tymojiData;
-  };
 
+    emojisData = emojioneData;
+    emojiURL = emojioneURL;
+  } else { // Tymoji should be the default
+    emojisData = tymojiData;
+    emojiURL = tymojiURL;
+  };
   // Loop through every post
   for (var i = 0, l = posts.length; i < l; i++) {
     var el = posts[i];
     // Now loop through every emoji
     for (var j = 0, n = emojisData.length; j < n; j++) {
       var matching = new RegExp(emojisData[j][0], "g");
-      var replaceString = '<img src="' + emojisData[j][1] + '" title="' + emojisData[j][2] + '" width="16" height="16"></img>';
+      var replaceString = '<img src="' + emojiURL + emojisData[j][1] + '" title="' + emojisData[j][2] + '" width="16" height="16"></img>';
       // Replace ~emoji~ with an emoji image
       el.innerHTML = el.innerHTML.replace(matching, replaceString);
     };  
