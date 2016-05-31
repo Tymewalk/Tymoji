@@ -29,3 +29,17 @@ When you type `~smile~`, it gets auto-replaced with a Tymoji smile. Neat, huh?
     ~frowning~ - Frowning face with mouth open
     ~angry~ - Angry face
     ~hushed~ - Hushed face
+
+## Contributor information
+If you're a contributor...
+
+### How to make versions
+For releases, use the normal versioning scheme (0.1, 0.1.1, 0.2, etc.)
+
+For dev builds, use this versioning scheme:
+
+    0.1-dev001
+
+`0.1` is the release being worked on. For example, if you released 0.1 yesterday, it would be `0.2-devXXX`.
+
+`-dev001` is which dev build this is. Increase it every commit that changes code. This way, users can easily see how many commits behind they are.
