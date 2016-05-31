@@ -98,15 +98,18 @@ var addEmojis = function() {
     };  
   };
 
-  // Do the same for signatures
+  // Loop through every sig, too
   for (var i = 0, l = sigs.length; i < l; i++) {
     var el = sigs[i];
+    // Now loop through every emoji
     for (var j = 0, n = emojisData.length; j < n; j++) {
       var matching = new RegExp(emojisData[j][0], "g");
-      var replaceString = '<img src="' + emojisData[j][1] + '" title="' + emojisData[j][2] + '" width="16" height="16"></img>';
+      var replaceString = '<img src="' + emojiURL + emojisData[j][1] + '" title="' + emojisData[j][2] + '" width="16" height="16"></img>';
+      // Replace ~emoji~ with an emoji image
       el.innerHTML = el.innerHTML.replace(matching, replaceString);
-    };
+    };  
   };
+
 };
 
 addEmojis();
