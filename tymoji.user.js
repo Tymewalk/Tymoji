@@ -4,7 +4,7 @@
 // @description Tymewalk's Emojis for use on the Scratch forums. All in one handy userscript.
 // @include     http://scratch.mit.edu/discuss/*
 // @include     https://scratch.mit.edu/discuss/*
-// @version     0.1-dev001
+// @version     0.1-dev002
 // ==/UserScript==
 
 var posts = document.getElementsByClassName('post_body_html');
@@ -41,6 +41,9 @@ var tymojiData = [
  ["~frowning~", "frowning.png", "~frowning~"],
  ["~angry~", "angry.png", "~angry~"],
  ["~hushed~", "hushed.png", "~hushed~"],
+ ["~smile~", "smile.png", "~smile~"],
+ ["~joy~", "joy.png", "~joy~"],
+ ["~innocent~", "innocent.png", "~innocent~"],
 ];
 
 var emojioneURL = "http://emojione.com/wp-content/uploads/assets/emojis/";
@@ -64,6 +67,9 @@ var emojioneData = [
  ["~frowning~", "1f626.svg", "~frowning~"],
  ["~angry~", "1f620.svg", "~angry~"],
  ["~hushed~", "1f62f.svg", "~hushed~"],
+ ["~smile~", "1f604.svg", "~smile~"],
+ ["~joy~", "1f602.svg", "~joy~"],
+ ["~innocent~", "1f607.svg", "~innocent~"],
 ];
 
 var emojisData = tymojiData;
