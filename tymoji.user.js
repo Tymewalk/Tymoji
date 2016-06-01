@@ -4,7 +4,7 @@
 // @description Tymewalk's Emojis for use on the Scratch forums. All in one handy userscript.
 // @include     http://scratch.mit.edu/discuss/*
 // @include     https://scratch.mit.edu/discuss/*
-// @version     0.1-dev004
+// @version     0.1-dev005
 // ==/UserScript==
 
 var posts = document.getElementsByClassName('post_body_html');
@@ -74,21 +74,19 @@ var emojioneData = [
 
 var githubURL = "http://u.cubeupload.com/git/";
 var githubData = [
- ["~slight_smile~", "slight_smile.png", "~slight_smile~"], 
- ["~slight_frown~", "slight_frown.png", "~slight_frown~"],  
- ["~upside_down~", "upside_down.png", "~upside_down~"], 
- ["~no_mouth~", "no_mouth.png", "~no_mouth~"],  
+ ["~slight_smile~", "grinning.png", "~slight_smile~"], 
+ ["~slight_frown~", "frowning.png", "~slight_frown~"],  
+ ["~no_mouth~", "nomouth.png", "~no_mouth~"],  
  ["~rage~", "rage.png", "~rage~"],  
- ["~open_mouth~", "open_mouth.png", "~open_mouth~"],  
- ["~stuck_out_tongue~", "stuck_out_tongue.png", "~stuck_out_tongue~"],
+ ["~open_mouth~", "openmouth.png", "~open_mouth~"],  
+ ["~stuck_out_tongue~", "stuckouttongue.png", "~stuck_out_tongue~"],
  ["~cry~", "cry.png", "~cry~"],
- ["~stuck_out_tongue_winking_eye~", "stuck_out_tongue_winking_eye.png", "~stuck_out_tongue_winking_eye~"],
- ["~money_mouth~", "money_mouth.png", "~money_mouth~"],
+ ["~stuck_out_tongue_winking_eye~", "stuckouttonguewinkin.png", "~stuck_out_tongue_winking_eye~"],
  ["~sleeping~", "sleeping.png", "~sleeping~"],
  ["~wink~", "wink.png", "~wink~"],
  ["~package~", "package.png", "~package~"],
  ["~yum~", "yum.png", "~yum~"],
- ["~frowning2~", "frowning2.png", "~frowning2~"],
+ ["~frowning2~", "frowning.png", "~frowning2~"],
  ["~grinning~", "grinning.png", "~grinning~"],
  ["~frowning~", "frowning.png", "~frowning~"],
  ["~angry~", "angry.png", "~angry~"],
