@@ -4,7 +4,7 @@
 // @description Tymewalk's Emojis for use on the Scratch forums. All in one handy userscript.
 // @include     http://scratch.mit.edu/discuss/*
 // @include     https://scratch.mit.edu/discuss/*
-// @version     0.1-dev003
+// @version     0.1-dev004
 // ==/UserScript==
 
 var posts = document.getElementsByClassName('post_body_html');
@@ -36,7 +36,7 @@ var tymojiData = [
  ["~wink~", "wink.png", "~wink~"],
  ["~package~", "package.png", "~package~"],
  ["~yum~", "yum.png", "~yum~"],
- ["~frowning2~", "frowning2.png", "~yum~"],
+ ["~frowning2~", "frowning2.png", "~frowning2~"],
  ["~grinning~", "grinning.png", "~grinning~"],
  ["~frowning~", "frowning.png", "~frowning~"],
  ["~angry~", "angry.png", "~angry~"],
@@ -88,7 +88,7 @@ var githubData = [
  ["~wink~", "wink.png", "~wink~"],
  ["~package~", "package.png", "~package~"],
  ["~yum~", "yum.png", "~yum~"],
- ["~frowning2~", "frowning2.png", "~yum~"],
+ ["~frowning2~", "frowning2.png", "~frowning2~"],
  ["~grinning~", "grinning.png", "~grinning~"],
  ["~frowning~", "frowning.png", "~frowning~"],
  ["~angry~", "angry.png", "~angry~"],
