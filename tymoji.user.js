@@ -4,7 +4,7 @@
 // @description Tymewalk's Emojis for use on the Scratch forums. All in one handy userscript.
 // @include     http://scratch.mit.edu/discuss/*
 // @include     https://scratch.mit.edu/discuss/*
-// @version     0.1-dev002
+// @version     0.1-dev003
 // ==/UserScript==
 
 var posts = document.getElementsByClassName('post_body_html');
@@ -72,6 +72,32 @@ var emojioneData = [
  ["~innocent~", "1f607.svg", "~innocent~"],
 ];
 
+var githubURL = "http://u.cubeupload.com/git/";
+var githubData = [
+ ["~slight_smile~", "slight_smile.png", "~slight_smile~"], 
+ ["~slight_frown~", "slight_frown.png", "~slight_frown~"],  
+ ["~upside_down~", "upside_down.png", "~upside_down~"], 
+ ["~no_mouth~", "no_mouth.png", "~no_mouth~"],  
+ ["~rage~", "rage.png", "~rage~"],  
+ ["~open_mouth~", "open_mouth.png", "~open_mouth~"],  
+ ["~stuck_out_tongue~", "stuck_out_tongue.png", "~stuck_out_tongue~"],
+ ["~cry~", "cry.png", "~cry~"],
+ ["~stuck_out_tongue_winking_eye~", "stuck_out_tongue_winking_eye.png", "~stuck_out_tongue_winking_eye~"],
+ ["~money_mouth~", "money_mouth.png", "~money_mouth~"],
+ ["~sleeping~", "sleeping.png", "~sleeping~"],
+ ["~wink~", "wink.png", "~wink~"],
+ ["~package~", "package.png", "~package~"],
+ ["~yum~", "yum.png", "~yum~"],
+ ["~frowning2~", "frowning2.png", "~yum~"],
+ ["~grinning~", "grinning.png", "~grinning~"],
+ ["~frowning~", "frowning.png", "~frowning~"],
+ ["~angry~", "angry.png", "~angry~"],
+ ["~hushed~", "hushed.png", "~hushed~"],
+ ["~smile~", "smile.png", "~smile~"],
+ ["~joy~", "joy.png", "~joy~"],
+ ["~innocent~", "innocent.png", "~innocent~"],
+];
+
 var emojisData = tymojiData;
 var emojiType = "tymoji";
 var emojiURL = tymojiURL;
@@ -85,9 +111,11 @@ var addEmojis = function() {
   console.log("[TYMOJI] Adding emojis to page");
   emojiType = localStorage.tymojiEmojisType;
   if (emojiType === "emojione") {
-
     emojisData = emojioneData;
     emojiURL = emojioneURL;
+  } else if (emojiType === "github") {
+    emojisData = githubData;
+    emojiURL = githubURL;
   } else { // Tymoji should be the default
     emojisData = tymojiData;
     emojiURL = tymojiURL;
@@ -148,3 +176,15 @@ emojiOneButton.type="button";
 emojiOneButton.value="Use EmojiOne";
 emojiOneButton.onclick = setEmojiOne;
 document.body.appendChild(emojiOneButton);
+
+var setGithub = function() {
+    localStorage.tymojiEmojisType = "github";
+    //addEmojis();
+    console.log("[TYMOJI] Set Emoji Type to GitHub");
+};
+
+var githubButton = document.createElement("input");
+githubButton.type="button";
+githubButton.value="Use GitHub Emojis";
+githubButton.onclick = setGithub;
+document.body.appendChild(githubButton);
