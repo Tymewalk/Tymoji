@@ -4,10 +4,20 @@
 // @description Tymewalk's Emojis for use on the Scratch forums. All in one handy userscript.
 // @include     http://scratch.mit.edu/discuss/*
 // @include     https://scratch.mit.edu/discuss/*
+// @include     https://scratch.mit.edu/users/*
 // @version     0.1
 // @grant       metadata
 // ==/UserScript==
-
+function GetUrlValue(VarSearch){
+    var SearchString = window.location.search.substring(1);
+    var VariableArray = SearchString.split('&');
+    for(var i = 0; i < VariableArray.length; i++){
+        var KeyValuePair = VariableArray[i].split('=');
+        if(KeyValuePair[0] == VarSearch){
+            return KeyValuePair[1];
+        }
+    }
+}
 var posts = document.getElementsByClassName('post_body_html');
 var sigs = document.getElementsByClassName('postsignature');
 
@@ -147,7 +157,11 @@ var addEmojis = function() {
 
 addEmojis();
 
-// Create the settings
+
+
+if (GetUrlValue(tymoji)=="1") {
+  document.body.innerHTML = '';
+  // Create the settings
 var tymojiSettings = document.createElement("div");
 tymojiSettings.innerHTML = "<p>Tymoji Settings</p>";
 document.body.appendChild(tymojiSettings);
@@ -187,3 +201,5 @@ githubButton.type="button";
 githubButton.value="Use GitHub Emojis";
 githubButton.onclick = setGithub;
 document.body.appendChild(githubButton);
+  
+}
