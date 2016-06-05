@@ -159,7 +159,7 @@ addEmojis();
 
 
 
-if (GetUrlValue(tymoji)=="1") {
+if (GetUrlValue("tymoji")=="1") {
   document.body.innerHTML = '';
   // Create the settings
 var tymojiSettings = document.createElement("div");
