@@ -4,7 +4,7 @@
 // @description Tymewalk's Emojis for use on the Scratch forums. All in one handy userscript.
 // @include     http://scratch.mit.edu/discuss/*
 // @include     https://scratch.mit.edu/discuss/*
-// @include     https://scratch.mit.edu/accounts/settings/
+// @include     https://scratch.mit.edu/accounts/settings/*
 // @version     0.1
 // @grant       metadata
 // ==/UserScript==
