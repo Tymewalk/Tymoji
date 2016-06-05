@@ -4,10 +4,12 @@
 // @description Tymewalk's Emojis for use on the Scratch forums. All in one handy userscript.
 // @include     http://scratch.mit.edu/discuss/*
 // @include     https://scratch.mit.edu/discuss/*
+// @include     https://scratch.mit.edu/accounts/settings/*
+ // @include  http://scratch.mit.edu/accounts/settings/*
+// @include  https://scratch.mit.edu/accounts/settings/?tymoji=1
 // @version     0.1
 // @grant       metadata
 // ==/UserScript==
-
 var posts = document.getElementsByClassName('post_body_html');
 var sigs = document.getElementsByClassName('postsignature');
 
@@ -147,10 +149,14 @@ var addEmojis = function() {
 
 addEmojis();
 
-// Create the settings
+
+console.log(GetUrlValue("tymoji"));
+if (window.location=="https://scratch.mit.edu/accounts/settings/") {
+  // Create the settings
 var tymojiSettings = document.createElement("div");
 tymojiSettings.innerHTML = "<p>Tymoji Settings</p>";
-document.body.appendChild(tymojiSettings);
+$("#main-content").append(tymojiSettings);
+
 
 var setTymojis = function() {
     localStorage.tymojiEmojisType = "tymoji";
@@ -162,7 +168,7 @@ var tymojiButton = document.createElement("input");
 tymojiButton.type="button";
 tymojiButton.value="Use Tymojis";
 tymojiButton.onclick = setTymojis;
-document.body.appendChild(tymojiButton);
+$("#main-content").append(tymojiButton);
 
 var setEmojiOne = function() {
     localStorage.tymojiEmojisType = "emojione";
@@ -174,7 +180,8 @@ var emojiOneButton = document.createElement("input");
 emojiOneButton.type="button";
 emojiOneButton.value="Use EmojiOne";
 emojiOneButton.onclick = setEmojiOne;
-document.body.appendChild(emojiOneButton);
+$("#main-content").append(emojiOneButton);
+
 
 var setGithub = function() {
     localStorage.tymojiEmojisType = "github";
@@ -186,4 +193,7 @@ var githubButton = document.createElement("input");
 githubButton.type="button";
 githubButton.value="Use GitHub Emojis";
 githubButton.onclick = setGithub;
-document.body.appendChild(githubButton);
+$("#main-content").append(githubButton);
+
+  
+}
