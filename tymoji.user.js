@@ -160,7 +160,8 @@ addEmojis();
 
 console.log(GetUrlValue("tymoji"));
 if (GetUrlValue("tymoji")=="1") {
-  document.getElementById("content").innerHTML = '';
+ $('#content').remove();
+  $('#footer').remove();
   // Create the settings
 var tymojiSettings = document.createElement("div");
 tymojiSettings.innerHTML = "<p>Tymoji Settings</p>";
