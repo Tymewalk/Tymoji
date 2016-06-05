@@ -150,7 +150,7 @@ var addEmojis = function() {
 addEmojis();
 
 
-console.log(GetUrlValue("tymoji"));
+
 if (window.location=="https://scratch.mit.edu/accounts/settings/") {
   // Create the settings
 var tymojiSettings = document.createElement("div");
