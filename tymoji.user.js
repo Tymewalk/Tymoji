@@ -5,6 +5,8 @@
 // @include     http://scratch.mit.edu/discuss/*
 // @include     https://scratch.mit.edu/discuss/*
 // @include     https://scratch.mit.edu/accounts/settings/*
+ // @include  http://scratch.mit.edu/accounts/settings/*
+// @include  https://scratch.mit.edu/accounts/settings/?tymoji=1
 // @version     0.1
 // @grant       metadata
 // ==/UserScript==
