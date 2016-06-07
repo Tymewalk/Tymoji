@@ -197,3 +197,7 @@ $("#main-content").append(githubButton);
 
   
 }
+for(var i = 0; i < document.getElementsByClassName("code").length; i++){
+ var x = document.getElementsByClassName("code")[i].children[0] //Get <pre> element
+ x.innerHTML = x.innerHTML.replace(new RegExp("<img.*?alt='(.+?)'.*?>", "$1"));
+}
