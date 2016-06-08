@@ -157,7 +157,20 @@ var tymojiSettings = document.createElement("div");
 tymojiSettings.innerHTML = "<p>Tymoji Settings</p>";
 $("#main-content").append(tymojiSettings);
 
+var setTab = function(tab_id) {
+ var tabs = document.querySelector(".tabs-index").children[0].children
+ for (var x = 0; x < tabs.length; x++) {
+  tabs[x].classList.remove("active")
+ }
+ tabs[tab_id].classList.add("active")
+}
 
+var tymojiSettings = function() {
+ setTab(3)
+}
+
+// not finished
+`
 var setTymojis = function() {
     localStorage.tymojiEmojisType = "tymoji";
     //addEmojis();
@@ -194,6 +207,6 @@ githubButton.type="button";
 githubButton.value="Use GitHub Emojis";
 githubButton.onclick = setGithub;
 $("#main-content").append(githubButton);
-
+`
   
 }
