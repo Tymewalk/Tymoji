@@ -197,7 +197,7 @@ $("#main-content").append(githubButton);
 
   
 }
-for (var errorImage = document.querySelector("pre > img:not([visibility])"); errorImage != null; errorImage = document.querySelector("pre > img[visibility]")){
+for (var errorImage = document.querySelector("pre > img:not([visibility])"); errorImage != null; errorImage = document.querySelector("pre > img:not([visibility])"){
  errorImage.width = 0;
   errorImage.height = 0;
  errorImage.parentElement.insertBefore(document.createTextNode(errorImage.title), errorImage)
