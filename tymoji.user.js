@@ -5,11 +5,12 @@
 // @include     http://scratch.mit.edu/discuss/*
 // @include     https://scratch.mit.edu/discuss/*
 // @include     https://scratch.mit.edu/accounts/settings/*
- // @include  http://scratch.mit.edu/accounts/settings/*
-// @include  https://scratch.mit.edu/accounts/settings/?tymoji=1
+// @include     http://scratch.mit.edu/accounts/settings/*
+// @include     https://scratch.mit.edu/accounts/settings/?tymoji=1
 // @version     0.1
 // @grant       metadata
 // ==/UserScript==
+
 var posts = document.getElementsByClassName('post_body_html');
 var sigs = document.getElementsByClassName('postsignature');
 
@@ -23,6 +24,7 @@ var sigs = sigs.filter( function( el ) {
   return code.indexOf( el ) < 0;
 } );
 */
+
 var tymojiURL = "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/";
 var tymojiData = [
  ["~slight_smile~", "slight_smile.png", "~slight_smile~"], 
@@ -104,47 +106,46 @@ var emojiType = "tymoji";
 var emojiURL = tymojiURL;
 
 if (!localStorage.tymojiEmojisType) {
-  console.log("[TYMOJI] Setting localStorage emoji type to Tymoji for first-time setup");
-  localStorage.tymojiEmojisType = "tymoji";
+	console.log("[TYMOJI] Setting localStorage emoji type to Tymoji for first-time setup");
+	localStorage.tymojiEmojisType = "tymoji";
 };
 
 var addEmojis = function() {
-  console.log("[TYMOJI] Adding emojis to page");
-  emojiType = localStorage.tymojiEmojisType;
-  if (emojiType === "emojione") {
-    emojisData = emojioneData;
-    emojiURL = emojioneURL;
-  } else if (emojiType === "github") {
-    emojisData = githubData;
-    emojiURL = githubURL;
-  } else { // Tymoji should be the default
-    emojisData = tymojiData;
-    emojiURL = tymojiURL;
-  };
-  // Loop through every post
-  for (var i = 0, l = posts.length; i < l; i++) {
-    var el = posts[i];
-    // Now loop through every emoji
-    for (var j = 0, n = emojisData.length; j < n; j++) {
-      var matching = new RegExp(emojisData[j][0], "g");
-      var replaceString = '<img src="' + emojiURL + emojisData[j][1] + '" title="' + emojisData[j][2] + '" width="16" height="16"></img>';
-      // Replace ~emoji~ with an emoji image
-      el.innerHTML = el.innerHTML.replace(matching, replaceString);
-    };  
-  };
+	console.log("[TYMOJI] Adding emojis to page");
+	emojiType = localStorage.tymojiEmojisType;
+	if (emojiType === "emojione") {
+		emojisData = emojioneData;
+		emojiURL = emojioneURL;
+	} else if (emojiType === "github") {
+		emojisData = githubData;
+		emojiURL = githubURL;
+	} else { // Tymoji should be the default
+		emojisData = tymojiData;
+		emojiURL = tymojiURL;
+	};
+	// Loop through every post
+	for (var i = 0, l = posts.length; i < l; i++) {
+		var el = posts[i];
+		// Now loop through every emoji
+		for (var j = 0, n = emojisData.length; j < n; j++) {
+			var matching = new RegExp(emojisData[j][0], "g");
+			var replaceString = '<img src="' + emojiURL + emojisData[j][1] + '" class="tymoji-image" title="' + emojisData[j][2] + '" width="16" height="16"></img>';
+			// Replace ~emoji~ with an emoji image
+			el.innerHTML = el.innerHTML.replace(matching, replaceString);
+		};  
+	};
 
-  // Loop through every sig, too
-  for (var i = 0, l = sigs.length; i < l; i++) {
-    var el = sigs[i];
-    // Now loop through every emoji
-    for (var j = 0, n = emojisData.length; j < n; j++) {
-      var matching = new RegExp(emojisData[j][0], "g");
-      var replaceString = '<img src="' + emojiURL + emojisData[j][1] + '" title="' + emojisData[j][2] + '" width="16" height="16"></img>';
-      // Replace ~emoji~ with an emoji image
-      el.innerHTML = el.innerHTML.replace(matching, replaceString);
-    };  
-  };
-
+	// Loop through every sig, too
+	for (var i = 0, l = sigs.length; i < l; i++) {
+		var el = sigs[i];
+		// Now loop through every emoji
+		for (var j = 0, n = emojisData.length; j < n; j++) {
+			var matching = new RegExp(emojisData[j][0], "g");
+			var replaceString = '<img src="' + emojiURL + emojisData[j][1] + '" class="tymoji-image" title="' + emojisData[j][2] + '" width="16" height="16"></img>';
+			// Replace ~emoji~ with an emoji image
+			el.innerHTML = el.innerHTML.replace(matching, replaceString);
+		};  
+	};
 };
 
 addEmojis();
@@ -152,61 +153,60 @@ addEmojis();
 
 
 if (window.location=="https://scratch.mit.edu/accounts/settings/") {
-  // Create the settings
-var tymojiSettings = document.createElement("div");
-tymojiSettings.innerHTML = "<p>Tymoji Settings</p>";
-$("#main-content").append(tymojiSettings);
 
-var setTab = function(tab_id) {
- var tabs = document.querySelector(".tabs-index").children[0].children
- for (var x = 0; x < tabs.length; x++) {
-  tabs[x].classList.remove("active")
- }
- tabs[tab_id].classList.add("active")
-}
+	var setTab = function(tab_id) {
+		var tabs = document.querySelector(".tabs-index").children[0].children
+		for (var x = 0; x < tabs.length; x++) {
+			tabs[x].classList.remove("active")
+		}
+		tabs[tab_id].classList.add("active")
+	}
+	
+	var setEmojiType = function(type) {
+		localStorage.tymojiEmojisType = type;
+		//addEmojis();
+		console.log("[TYMOJI] Set Emoji Type to " + type[0].toUpperCase + type.slice(1));
+	};
 
-var tymojiSettings = function() {
- setTab(3)
-}
+	var tymojiSettings = function() {
+		setTab(3)
+		document.querySelector("#main-content").innerHTML = "<h4>Tymoji Settings</h4>"
+	}
 
-// not finished
-`
-var setTymojis = function() {
-    localStorage.tymojiEmojisType = "tymoji";
-    //addEmojis();
-    console.log("[TYMOJI] Set Emoji Type to Tymoji");
-};
+	var tabs_box = document.querySelector(".tabs-index").children[0].children
+	tabs_box.innerHTML = tabs_box.innerHTML + "<li class=""><a href=\"javascript:tymojiSettings()\">Tymoji Settings</a></li>"
 
-var tymojiButton = document.createElement("input");
-tymojiButton.type="button";
-tymojiButton.value="Use Tymojis";
-tymojiButton.onclick = setTymojis;
-$("#main-content").append(tymojiButton);
-
-var setEmojiOne = function() {
-    localStorage.tymojiEmojisType = "emojione";
-    //addEmojis();
-    console.log("[TYMOJI] Set Emoji Type to EmojiOne");
-};
-
-var emojiOneButton = document.createElement("input");
-emojiOneButton.type="button";
-emojiOneButton.value="Use EmojiOne";
-emojiOneButton.onclick = setEmojiOne;
-$("#main-content").append(emojiOneButton);
-
-
-var setGithub = function() {
-    localStorage.tymojiEmojisType = "github";
-    //addEmojis();
-    console.log("[TYMOJI] Set Emoji Type to GitHub");
-};
-
-var githubButton = document.createElement("input");
-githubButton.type="button";
-githubButton.value="Use GitHub Emojis";
-githubButton.onclick = setGithub;
-$("#main-content").append(githubButton);
-`
-  
+	// not finished
+	`
+	var setTymojis = function() {
+		localStorage.tymojiEmojisType = "tymoji";
+		//addEmojis();
+		console.log("[TYMOJI] Set Emoji Type to Tymoji");
+	};
+	var tymojiButton = document.createElement("input");
+	tymojiButton.type="button";
+	tymojiButton.value="Use Tymojis";
+	tymojiButton.onclick = setTymojis;
+	$("#main-content").append(tymojiButton);
+	var setEmojiOne = function() {
+		localStorage.tymojiEmojisType = "emojione";
+		//addEmojis();
+		console.log("[TYMOJI] Set Emoji Type to EmojiOne");
+	};
+	var emojiOneButton = document.createElement("input");
+	emojiOneButton.type="button";
+	emojiOneButton.value="Use EmojiOne";
+	emojiOneButton.onclick = setEmojiOne;
+	$("#main-content").append(emojiOneButton);
+	var setGithub = function() {
+		localStorage.tymojiEmojisType = "github";
+		//addEmojis();
+		console.log("[TYMOJI] Set Emoji Type to GitHub");
+	};
+	var githubButton = document.createElement("input");
+	githubButton.type="button";
+	githubButton.value="Use GitHub Emojis";
+	githubButton.onclick = setGithub;
+	$("#main-content").append(githubButton);
+	`
 }
