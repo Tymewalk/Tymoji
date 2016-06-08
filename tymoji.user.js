@@ -27,12 +27,12 @@ var sigs = sigs.filter( function( el ) {
 
 var tymojiURL = "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/";
 var tymojiData = [
- ["~slight_smile~", "slight_smile.png", "~slight_smile~"], 
- ["~slight_frown~", "slight_frown.png", "~slight_frown~"],  
- ["~upside_down~", "upside_down.png", "~upside_down~"], 
- ["~no_mouth~", "no_mouth.png", "~no_mouth~"],  
- ["~rage~", "rage.png", "~rage~"],  
- ["~open_mouth~", "open_mouth.png", "~open_mouth~"],  
+ ["~slight_smile~", "slight_smile.png", "~slight_smile~"],
+ ["~slight_frown~", "slight_frown.png", "~slight_frown~"],
+ ["~upside_down~", "upside_down.png", "~upside_down~"],
+ ["~no_mouth~", "no_mouth.png", "~no_mouth~"],
+ ["~rage~", "rage.png", "~rage~"],
+ ["~open_mouth~", "open_mouth.png", "~open_mouth~"],
  ["~stuck_out_tongue~", "stuck_out_tongue.png", "~stuck_out_tongue~"],
  ["~cry~", "cry.png", "~cry~"],
  ["~stuck_out_tongue_winking_eye~", "stuck_out_tongue_winking_eye.png", "~stuck_out_tongue_winking_eye~"],
@@ -54,11 +54,11 @@ var tymojiData = [
 var emojioneURL = "http://emojione.com/wp-content/uploads/assets/emojis/";
 var emojioneData = [
  ["~slight_smile~", "1f642.svg", "~slight_smile~"],
- ["~slight_frown~", "1f641.svg", "~slight_frown~"],  
- ["~upside_down~", "1f643.svg", "~upside_down~"], 
- ["~no_mouth~", "1f636.svg", "~no_mouth~"],  
- ["~rage~", "1f621.svg", "~rage~"],  
- ["~open_mouth~", "1f62e.svg", "~open_mouth~"],  
+ ["~slight_frown~", "1f641.svg", "~slight_frown~"],
+ ["~upside_down~", "1f643.svg", "~upside_down~"],
+ ["~no_mouth~", "1f636.svg", "~no_mouth~"],
+ ["~rage~", "1f621.svg", "~rage~"],
+ ["~open_mouth~", "1f62e.svg", "~open_mouth~"],
  ["~stuck_out_tongue~", "1f61b.svg", "~stuck_out_tongue~"],
  ["~cry~", "1f622.svg", "~cry~"],
  ["~stuck_out_tongue_winking_eye~", "1f61c.svg", "~stuck_out_tongue_winking_eye~"],
@@ -79,11 +79,11 @@ var emojioneData = [
 
 var githubURL = "http://u.cubeupload.com/git/";
 var githubData = [
- ["~slight_smile~", "grinning.png", "~slight_smile~"], 
- ["~slight_frown~", "frowning.png", "~slight_frown~"],  
- ["~no_mouth~", "nomouth.png", "~no_mouth~"],  
- ["~rage~", "rage.png", "~rage~"],  
- ["~open_mouth~", "openmouth.png", "~open_mouth~"],  
+ ["~slight_smile~", "grinning.png", "~slight_smile~"],
+ ["~slight_frown~", "frowning.png", "~slight_frown~"],
+ ["~no_mouth~", "nomouth.png", "~no_mouth~"],
+ ["~rage~", "rage.png", "~rage~"],
+ ["~open_mouth~", "openmouth.png", "~open_mouth~"],
  ["~stuck_out_tongue~", "stuckouttongue.png", "~stuck_out_tongue~"],
  ["~cry~", "cry.png", "~cry~"],
  ["~stuck_out_tongue_winking_eye~", "stuckouttonguewinkin.png", "~stuck_out_tongue_winking_eye~"],
@@ -108,7 +108,7 @@ var emojiURL = tymojiURL;
 if (!localStorage.tymojiEmojisType) {
 	console.log("[TYMOJI] Setting localStorage emoji type to Tymoji for first-time setup");
 	localStorage.tymojiEmojisType = "tymoji";
-};
+}
 
 var addEmojis = function() {
 	console.log("[TYMOJI] Adding emojis to page");
@@ -122,7 +122,7 @@ var addEmojis = function() {
 	} else { // Tymoji should be the default
 		emojisData = tymojiData;
 		emojiURL = tymojiURL;
-	};
+	}
 	// Loop through every post
 	for (var i = 0, l = posts.length; i < l; i++) {
 		var el = posts[i];
@@ -132,8 +132,8 @@ var addEmojis = function() {
 			var replaceString = '<img src="' + emojiURL + emojisData[j][1] + '" class="tymoji-image" title="' + emojisData[j][2] + '" width="16" height="16"></img>';
 			// Replace ~emoji~ with an emoji image
 			el.innerHTML = el.innerHTML.replace(matching, replaceString);
-		};  
-	};
+		}
+	}
 
 	// Loop through every sig, too
 	for (var i = 0, l = sigs.length; i < l; i++) {
@@ -144,8 +144,8 @@ var addEmojis = function() {
 			var replaceString = '<img src="' + emojiURL + emojisData[j][1] + '" class="tymoji-image" title="' + emojisData[j][2] + '" width="16" height="16"></img>';
 			// Replace ~emoji~ with an emoji image
 			el.innerHTML = el.innerHTML.replace(matching, replaceString);
-		};  
-	};
+		}
+	}
 };
 
 addEmojis();
@@ -155,13 +155,13 @@ addEmojis();
 if (window.location=="https://scratch.mit.edu/accounts/settings/") {
 
 	var setTab = function(tab_id) {
-		var tabs = document.querySelector(".tabs-index").children[0].children
+		var tabs = document.querySelector(".tabs-index").children[0].children;
 		for (var x = 0; x < tabs.length; x++) {
-			tabs[x].classList.remove("active")
+			tabs[x].classList.remove("active");
 		}
-		tabs[tab_id].classList.add("active")
-	}
-	
+		tabs[tab_id].classList.add("active");
+	};
+
 	var setEmojiType = function(type) {
 		localStorage.tymojiEmojisType = type;
 		//addEmojis();
@@ -169,44 +169,45 @@ if (window.location=="https://scratch.mit.edu/accounts/settings/") {
 	};
 
 	var tymojiSettings = function() {
-		setTab(3)
-		document.querySelector("#main-content").innerHTML = "<h4>Tymoji Settings</h4>"
-	}
+		setTab(3);
+		document.querySelector("#main-content").innerHTML = "<h4>Tymoji Settings</h4>";
+	};
 
-	var tabs_box = document.querySelector(".tabs-index").children[0].children
-	tabs_box.innerHTML = tabs_box.innerHTML + "<li class=""><a href=\"javascript:tymojiSettings()\">Tymoji Settings</a></li>"
+	var tabs_box = document.querySelector(".tabs-index").children[0].children;
+	tabs_box.innerHTML = tabs_box.innerHTML + "<li class=\"\"><a href=\"javascript:tymojiSettings()\">Tymoji Settings</a></li>";
 
 	// not finished
-	`
-	var setTymojis = function() {
-		localStorage.tymojiEmojisType = "tymoji";
-		//addEmojis();
-		console.log("[TYMOJI] Set Emoji Type to Tymoji");
-	};
-	var tymojiButton = document.createElement("input");
-	tymojiButton.type="button";
-	tymojiButton.value="Use Tymojis";
-	tymojiButton.onclick = setTymojis;
-	$("#main-content").append(tymojiButton);
-	var setEmojiOne = function() {
-		localStorage.tymojiEmojisType = "emojione";
-		//addEmojis();
-		console.log("[TYMOJI] Set Emoji Type to EmojiOne");
-	};
-	var emojiOneButton = document.createElement("input");
-	emojiOneButton.type="button";
-	emojiOneButton.value="Use EmojiOne";
-	emojiOneButton.onclick = setEmojiOne;
-	$("#main-content").append(emojiOneButton);
-	var setGithub = function() {
-		localStorage.tymojiEmojisType = "github";
-		//addEmojis();
-		console.log("[TYMOJI] Set Emoji Type to GitHub");
-	};
-	var githubButton = document.createElement("input");
-	githubButton.type="button";
-	githubButton.value="Use GitHub Emojis";
-	githubButton.onclick = setGithub;
-	$("#main-content").append(githubButton);
-	`
+
+/*
+var setTymojis = function() {
+localStorage.tymojiEmojisType = "tymoji";
+//addEmojis();
+console.log("[TYMOJI] Set Emoji Type to Tymoji");
+};
+var tymojiButton = document.createElement("input");
+tymojiButton.type="button";
+tymojiButton.value="Use Tymojis";
+tymojiButton.onclick = setTymojis;
+$("#main-content").append(tymojiButton);
+var setEmojiOne = function() {
+localStorage.tymojiEmojisType = "emojione";
+//addEmojis();
+console.log("[TYMOJI] Set Emoji Type to EmojiOne");
+};
+var emojiOneButton = document.createElement("input");
+emojiOneButton.type="button";
+emojiOneButton.value="Use EmojiOne";
+emojiOneButton.onclick = setEmojiOne;
+$("#main-content").append(emojiOneButton);
+var setGithub = function() {
+localStorage.tymojiEmojisType = "github";
+//addEmojis();
+console.log("[TYMOJI] Set Emoji Type to GitHub");
+};
+var githubButton = document.createElement("input");
+githubButton.type="button";
+githubButton.value="Use GitHub Emojis";
+githubButton.onclick = setGithub;
+$("#main-content").append(githubButton);
+*/
 }
