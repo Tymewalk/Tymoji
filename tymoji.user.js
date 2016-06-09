@@ -144,6 +144,12 @@ var addEmojis = function() {
       el.innerHTML = el.innerHTML.replace(matching, replaceString);
     };  
   };
+  //Loop throug every image that should not exist (within [code][/code] BBCode tags)
+  for (var errorImage = document.querySelector("pre > img:not([visibility])"); errorImage != null; errorImage = document.querySelector("pre > img:not([visibility])"){
+ errorImage.width = 0;
+  errorImage.height = 0;
+ errorImage.parentElement.insertBefore(document.createTextNode(errorImage.title), errorImage)
+}
 
 };
 
@@ -196,9 +202,4 @@ githubButton.onclick = setGithub;
 $("#main-content").append(githubButton);
 
   
-}
-for (var errorImage = document.querySelector("pre > img:not([visibility])"); errorImage != null; errorImage = document.querySelector("pre > img:not([visibility])"){
- errorImage.width = 0;
-  errorImage.height = 0;
- errorImage.parentElement.insertBefore(document.createTextNode(errorImage.title), errorImage)
 }
