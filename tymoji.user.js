@@ -140,6 +140,24 @@ addEmojis = function(additional) {
     errorImage.isMap = "false";
  errorImage.parentElement.insertBefore(document.createTextNode(errorImage.title), errorImage);
 }
+var k = mySettings.markupSet.push({name:'Tymoji', openWith:'', closeWith:'', dropMenu:[]}) - 1;
+for(var j = 0, n = emojisData.length; j < n; j++){
+mySettings.markupSet[k].dropMenu.push({'name': emojisData[j][2], 'openWith':emojisData[j][2]});
+}
+document.getElementsByClassName("markItUpHeader")[0].innerHTML = "";
+            $(".markup").markItUp(mySettings);
+            document.getElementsByClassName("markItUpButton")[177].style.backgroundImage = "url('" + emojiURL + emojisData[0][1] + "')";
+                document.getElementsByClassName("markItUpButton")[177].style.backgroundSize = "16px 16px";
+                document.getElementsByClassName("markItUpButton")[177].style.backgroundRepeat = "no-repeat";
+                document.getElementsByClassName("markItUpButton")[177].style.zIndex = "300";
+            for (var j = 0, n = emojisData.length; j < n; j++){
+                //Style the dropdown to Scratch's markItUp textbox
+                document.getElementsByClassName("markItUpButton")[j+178].style.backgroundImage = "url('" + emojiURL + emojisData[j][1] + "')";
+                document.getElementsByClassName("markItUpButton")[j+178].style.backgroundSize = "16px 16px";
+                document.getElementsByClassName("markItUpButton")[j+178].style.backgroundRepeat = "no-repeat";
+                document.getElementsByClassName("markItUpButton")[j+178].style.zIndex = "300";
+                
+        }
 };
 
 removeEmojis = function() {
