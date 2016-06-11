@@ -133,6 +133,12 @@ addEmojis = function(additional) {
     addToElems(document.getElementsByClassName('post_body_html'));
     addToElems(document.getElementsByClassName('postsignature'));
     addToElems(additional || []);
+     for (var errorImage = document.querySelector("pre > img:not([ismap])"); errorImage != null; errorImage = document.querySelector("pre > img:not([ismap])")){
+ errorImage.width = 0;
+  errorImage.height = 0;
+    errorImage.isMap = "false";
+ errorImage.parentElement.insertBefore(document.createTextNode(errorImage.title), errorImage);
+}
 };
 
 removeEmojis = function() {
