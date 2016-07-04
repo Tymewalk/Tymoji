@@ -181,9 +181,7 @@ if ((window.location.pathname == "/accounts/password_change/") || (window.locati
 		localStorage.tymojiEmojisType = type.toLowerCase();
 		console.log("[TYMOJI] Set Emoji Type to " + type);
 	};
-	var tabs_box = document.querySelector(".tabs-index").children[0];
-	tabs_box.innerHTML = tabs_box.innerHTML + '<li class=""><a href="javascript:void(window.location.hash="#tymojiSettings")">Tymoji Settings</a></li>';
-    if (window.location.hash == "#tymojiSettings") {
+    var tymojiSettings = function() {
         setTab(3);
         document.querySelector("#main-content").innerHTML = "<h4>Tymoji Settings</h4><br><form class=\"tymoji-settings\"><div class=\"field-wrapper\"><label>Enable Tymoji</label><select class=\"tymoji-enable-disable\"><option value=\"Enabled\">Enabled</option><option value=\"Disabled\">Disabled</option></select><br><label>Emoji Type</label><div class=\"tymoji-sample-space\">~slight_smile~ ~slight_frown~ ~open_mouth~ ~smile~ ~stuck_out_tongue_winking_eye~ ~wink~ ~joy~</div><select class=\"tymoji-emoji-selection\"><option value=\"Tymoji\">Tymoji</option><option value=\"EmojiOne\">EmojiOne</option><option value=\"GitHub\">GitHub</option></select></div></form>";
         loadSampleEmoji();
@@ -191,6 +189,11 @@ if ((window.location.pathname == "/accounts/password_change/") || (window.locati
         document.getElementsByClassName("tymoji-emoji-selection")[0].onchange = function(){setEmojiType(document.getElementsByClassName("tymoji-emoji-selection")[0].value); loadSampleEmoji();};
         document.getElementsByClassName("tymoji-enable-disable")[0].value = (localStorage.tymojiEnabled === "true") ? ("Enabled") : ((localStorage.tymojiEnabled === "false") ? ("Disabled") : ("Enabled"));
         document.getElementsByClassName("tymoji-enable-disable")[0].onchange = function(){var value = document.getElementsByClassName("tymoji-enable-disable")[0].value; localStorage.tymojiEnabled = (value === "Enabled") ? ("true") : ((value === "Disabled") ? ("false") : ("true"));}
+   }
+	var tabs_box = document.querySelector(".tabs-index").children[0];
+	tabs_box.innerHTML = tabs_box.innerHTML + '<li class=""><a href="javascript:void(window.location.hash = \'#tymojiSettings\')">Tymoji Settings</a></li>';
+    if (window.location.hash == "#tymojiSettings") {
+        tymojiSettings();
     }
 }
 
