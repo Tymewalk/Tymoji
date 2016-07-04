@@ -10,7 +10,7 @@
 // @include     http://scratch.mit.edu/accounts/password_change/*
 // @include     https://scratch.mit.edu/accounts/email_change/*
 // @include     http://scratch.mit.edu/accounts/email_change/*
-// @version     0.2-dev007
+// @version     0.2-dev008
 // @updateURL   https://www.github.com/Tymewalk/Tymoji/raw/master/tymoji.user.js
 // @grant       metadata
 // ==/UserScript==
@@ -52,6 +52,8 @@ var tymojiData = [
  ["~innocent~", "innocent.png", "~innocent~"],
  ["~fireworks~", "fireworks.png", "~fireworks~"],
  ["~grimacing~", "grimacing.png", "~grimacing~"],
+ ["~astonished~", "astonished.png", "~astonished~"],
+ ["~cowboy~", "cowboy.png", "~cowboy~"],
 ];
 
 // Note that EmojiOne uses codepoints rather than shortname filenames
@@ -81,6 +83,8 @@ var emojioneData = [
  ["~innocent~", "1f607.svg", "~innocent~"],
  ["~fireworks~", "1f386.svg", "~fireworks~"],
  ["~grimacing~", "1f62c.svg", "~grimacing~"],
+ ["~astonished~", "1f632.svg", "~astonished~"],
+ ["~cowboy~", "1f920.svg", "~cowboy~"],
 ];
 
 var githubURL = "http://u.cubeupload.com/git/";
@@ -107,6 +111,8 @@ var githubData = [
  ["~innocent~", "innocent.png", "~innocent~"],
  ["~fireworks~", "fireworks.png", "~fireworks~"],
  ["~grimacing~", "grimacing.png", "~grimacing~"],
+ ["~astonished~", "astonished.png", "~astonished~"],
+ // GitHub (or rather, Apple) does not have a cowboy emoji
 ];
 
 var emojisData = tymojiData;
