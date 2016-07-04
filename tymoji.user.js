@@ -10,7 +10,7 @@
 // @include     http://scratch.mit.edu/accounts/password_change/*
 // @include     https://scratch.mit.edu/accounts/email_change/*
 // @include     http://scratch.mit.edu/accounts/email_change/*
-// @version     0.1-dev004
+// @version     0.2-dev004
 // @updateURL   https://www.github.com/Tymewalk/Tymoji/raw/master/tymoji.user.js
 // @grant       metadata
 // ==/UserScript==
