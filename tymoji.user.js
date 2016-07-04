@@ -51,6 +51,7 @@ var tymojiData = [
  ["~joy~", "joy.png", "~joy~"],
  ["~innocent~", "innocent.png", "~innocent~"],
  ["~fireworks~", "fireworks.png", "~fireworks~"],
+ ["~grimacing~", "grimacing.png", "~grimacing~"],
 ];
 
 // Note that EmojiOne uses codepoints rather than shortname filenames
@@ -79,6 +80,7 @@ var emojioneData = [
  ["~joy~", "1f602.svg", "~joy~"],
  ["~innocent~", "1f607.svg", "~innocent~"],
  ["~fireworks~", "1f386.svg", "~fireworks~"],
+ ["~grimacing~", "1f62c.svg", "~grimacing~"],
 ];
 
 var githubURL = "http://u.cubeupload.com/git/";
@@ -104,6 +106,7 @@ var githubData = [
  ["~joy~", "joy.png", "~joy~"],
  ["~innocent~", "innocent.png", "~innocent~"],
  ["~fireworks~", "fireworks.png", "~fireworks~"],
+ ["~grimacing~", "grimacing.png", "~grimacing~"],
 ];
 
 var emojisData = tymojiData;
