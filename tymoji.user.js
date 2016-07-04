@@ -10,7 +10,7 @@
 // @include     http://scratch.mit.edu/accounts/password_change/*
 // @include     https://scratch.mit.edu/accounts/email_change/*
 // @include     http://scratch.mit.edu/accounts/email_change/*
-// @version     0.1
+// @version     0.1-dev004
 // @updateURL   https://www.github.com/Tymewalk/Tymoji/raw/master/tymoji.user.js
 // @grant       metadata
 // ==/UserScript==
@@ -50,8 +50,10 @@ var tymojiData = [
  ["~smile~", "smile.png", "~smile~"],
  ["~joy~", "joy.png", "~joy~"],
  ["~innocent~", "innocent.png", "~innocent~"],
+ ["~fireworks~", "fireworks.png", "~fireworks~"],
 ];
 
+// Note that EmojiOne uses codepoints rather than shortname filenames
 var emojioneURL = "http://emojione.com/wp-content/uploads/assets/emojis/";
 var emojioneData = [
  ["~slight_smile~", "1f642.svg", "~slight_smile~"],
@@ -76,6 +78,7 @@ var emojioneData = [
  ["~smile~", "1f604.svg", "~smile~"],
  ["~joy~", "1f602.svg", "~joy~"],
  ["~innocent~", "1f607.svg", "~innocent~"],
+ ["~fireworks~", "1f386.svg", "~fireworks~"],
 ];
 
 var githubURL = "http://u.cubeupload.com/git/";
@@ -100,6 +103,7 @@ var githubData = [
  ["~smile~", "smile.png", "~smile~"],
  ["~joy~", "joy.png", "~joy~"],
  ["~innocent~", "innocent.png", "~innocent~"],
+ ["~fireworks~", "fireworks.png", "~fireworks~"],
 ];
 
 var emojisData = tymojiData;
