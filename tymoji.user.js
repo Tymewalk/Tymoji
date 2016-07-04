@@ -10,7 +10,7 @@
 // @include     http://scratch.mit.edu/accounts/password_change/*
 // @include     https://scratch.mit.edu/accounts/email_change/*
 // @include     http://scratch.mit.edu/accounts/email_change/*
-// @version     0.2-dev006
+// @version     0.2-dev007
 // @updateURL   https://www.github.com/Tymewalk/Tymoji/raw/master/tymoji.user.js
 // @grant       metadata
 // ==/UserScript==
@@ -141,12 +141,12 @@ addEmojis = function(additional) {
     addToElems(document.getElementsByClassName('post_body_html'));
     addToElems(document.getElementsByClassName('postsignature'));
     addToElems(additional || []);
-     for (var errorImage = document.querySelector("pre > img:not([ismap])"); errorImage != null; errorImage = document.querySelector("pre > img:not([ismap])")){
- errorImage.width = 0;
-  errorImage.height = 0;
-    errorImage.isMap = "false";
- errorImage.parentElement.insertBefore(document.createTextNode(errorImage.title), errorImage);
-}
+    for (var errorImage = document.querySelector("pre > img:not([ismap])"); errorImage != null; errorImage = document.querySelector("pre > img:not([ismap])")) {
+        errorImage.width = 0;
+        errorImage.height = 0;
+        errorImage.isMap = "false";
+        errorImage.parentElement.insertBefore(document.createTextNode(errorImage.title), errorImage);
+    }
 };
 
 removeEmojis = function() {
@@ -158,15 +158,15 @@ removeEmojis = function() {
 };
 
 if (localStorage.tymojiEnabled !== "false") {
-    console.log("[TYMOJI] Adding emojis to page");
+    console.log("[TYMOJI] Tymoji is enabled, adding emojis to page");
     addEmojis();
 }
 else {
-    console.log("[TYMOJI] Tymoji is disabled so emojis will not be added.");
+    console.log("[TYMOJI] Tymoji is disabled, emojis will not be added");
 }
 
 if ((window.location.pathname == "/accounts/password_change/") || (window.location.pathname == "/accounts/email_change/") || (window.location.pathname == "/accounts/settings/")) {
-	var setTab = function(tab_id) {
+    var setTab = function(tab_id) {
 		var tabs = document.querySelector(".tabs-index").children[0].children;
 		for (var x = 0; x < tabs.length; x++) {
 			tabs[x].classList.remove("active");
@@ -181,20 +181,16 @@ if ((window.location.pathname == "/accounts/password_change/") || (window.locati
 		localStorage.tymojiEmojisType = type.toLowerCase();
 		console.log("[TYMOJI] Set Emoji Type to " + type);
 	};
-	tymojiSettings = function() {
-        window.location.hash = "#tymojiSettings";
-		setTab(3);
+	var tabs_box = document.querySelector(".tabs-index").children[0];
+	tabs_box.innerHTML = tabs_box.innerHTML + '<li class=""><a href="javascript:void(window.location.hash="#tymojiSettings")">Tymoji Settings</a></li>';
+    if (window.location.hash == "#tymojiSettings") {
+        setTab(3);
         document.querySelector("#main-content").innerHTML = "<h4>Tymoji Settings</h4><br><form class=\"tymoji-settings\"><div class=\"field-wrapper\"><label>Enable Tymoji</label><select class=\"tymoji-enable-disable\"><option value=\"Enabled\">Enabled</option><option value=\"Disabled\">Disabled</option></select><br><label>Emoji Type</label><div class=\"tymoji-sample-space\">~slight_smile~ ~slight_frown~ ~open_mouth~ ~smile~ ~stuck_out_tongue_winking_eye~ ~wink~ ~joy~</div><select class=\"tymoji-emoji-selection\"><option value=\"Tymoji\">Tymoji</option><option value=\"EmojiOne\">EmojiOne</option><option value=\"GitHub\">GitHub</option></select></div></form>";
         loadSampleEmoji();
         document.getElementsByClassName("tymoji-emoji-selection")[0].value = emojiSources[localStorage.tymojiEmojisType][2] || emojiSources.tymoji[2];
         document.getElementsByClassName("tymoji-emoji-selection")[0].onchange = function(){setEmojiType(document.getElementsByClassName("tymoji-emoji-selection")[0].value); loadSampleEmoji();};
         document.getElementsByClassName("tymoji-enable-disable")[0].value = (localStorage.tymojiEnabled === "true") ? ("Enabled") : ((localStorage.tymojiEnabled === "false") ? ("Disabled") : ("Enabled"));
-        document.getElementsByClassName("tymoji-enable-disable")[0].onchange = function(){var value = document.getElementsByClassName("tymoji-enable-disable")[0].value; localStorage.tymojiEnabled = (value === "Enabled") ? ("true") : ((value === "Disabled") ? ("false") : ("true"));};
-    };
-	var tabs_box = document.querySelector(".tabs-index").children[0];
-	tabs_box.innerHTML = tabs_box.innerHTML + "<li class=\"\"><a href=\"javascript:tymojiSettings()\">Tymoji Settings</a></li>";
-    if (window.location.hash == "#tymojiSettings") {
-        tymojiSettings();
+        document.getElementsByClassName("tymoji-enable-disable")[0].onchange = function(){var value = document.getElementsByClassName("tymoji-enable-disable")[0].value; localStorage.tymojiEnabled = (value === "Enabled") ? ("true") : ((value === "Disabled") ? ("false") : ("true"));}
     }
 }
 
