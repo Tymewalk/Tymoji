@@ -190,11 +190,21 @@ if ((window.location.pathname == "/accounts/password_change/") || (window.locati
         document.getElementsByClassName("tymoji-enable-disable")[0].value = (localStorage.tymojiEnabled === "true") ? ("Enabled") : ((localStorage.tymojiEnabled === "false") ? ("Disabled") : ("Enabled"));
         document.getElementsByClassName("tymoji-enable-disable")[0].onchange = function(){var value = document.getElementsByClassName("tymoji-enable-disable")[0].value; localStorage.tymojiEnabled = (value === "Enabled") ? ("true") : ((value === "Disabled") ? ("false") : ("true"));}
    }
-	var tabs_box = document.querySelector(".tabs-index").children[0];
-	tabs_box.innerHTML = tabs_box.innerHTML + '<li class=""><a href="javascript:void(window.location.hash = \'#tymojiSettings\')">Tymoji Settings</a></li>';
-    if (window.location.hash == "#tymojiSettings") {
-        tymojiSettings();
+    // checkForHash checks if we've enabled the hash so we can just check when we press the button.
+    var checkForHash = function() {
+        if (window.location.hash == "#tymojiSettings") {
+            tymojiSettings();
+        }
     }
+    var doSettings = function() {
+        window.location.hash = "#tymojiSettings";
+        checkForHash();
+    }
+	var tabs_box = document.querySelector(".tabs-index").children[0];
+	tabs_box.innerHTML = tabs_box.innerHTML + '<li id="tymojiSettingsButton" class=""><a href="#tymojiSettings">Tymoji Settings</a></li>';
+    var button = document.getElementById("tymojiSettingsButton")
+    button.onclick = doSettings;
+    checkForHash();
 }
 
 if (window.location.pathname.split('/')[1] == 'discuss') {
