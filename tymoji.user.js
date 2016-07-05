@@ -10,7 +10,7 @@
 // @include     http://scratch.mit.edu/accounts/password_change/*
 // @include     https://scratch.mit.edu/accounts/email_change/*
 // @include     http://scratch.mit.edu/accounts/email_change/*
-// @version     0.2-dev008
+// @version     0.2-dev009
 // @updateURL   https://www.github.com/Tymewalk/Tymoji/raw/master/tymoji.user.js
 // @grant       metadata
 // ==/UserScript==
@@ -97,6 +97,7 @@ var githubData = [
  ["~stuck_out_tongue~", "stuckouttongue.png", "~stuck_out_tongue~"],
  ["~cry~", "cry.png", "~cry~"],
  ["~stuck_out_tongue_winking_eye~", "stuckouttonguewinkin.png", "~stuck_out_tongue_winking_eye~"],
+ // GitHub does not have the money_mouth emoji (but Apple does)
  ["~sleeping~", "sleeping.png", "~sleeping~"],
  ["~wink~", "wink.png", "~wink~"],
  ["~package~", "package.png", "~package~"],
@@ -115,10 +116,42 @@ var githubData = [
  // GitHub (or rather, Apple) does not have a cowboy emoji
 ];
 
+// Twitter also uses codepoints instead of shortnames, but does so with .png rather than .svg
+var twitterURL = "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/72x72/"
+var twitterData = [
+ ["~slight_smile~", "1f642.png", "~slight_smile~"],
+ ["~slight_frown~", "1f641.png", "~slight_frown~"],
+ ["~upside_down~", "1f643.png", "~upside_down~"],
+ ["~no_mouth~", "1f636.png", "~no_mouth~"],
+ ["~rage~", "1f621.png", "~rage~"],
+ ["~open_mouth~", "1f62e.png", "~open_mouth~"],
+ ["~stuck_out_tongue~", "1f61b.png", "~stuck_out_tongue~"],
+ ["~cry~", "1f622.png", "~cry~"],
+ ["~stuck_out_tongue_winking_eye~", "1f61c.png", "~stuck_out_tongue_winking_eye~"],
+ ["~money_mouth~", "1f911.png", "~money_mouth~"],
+ ["~sleeping~", "1f634.png", "~sleeping~"],
+ ["~wink~", "1f609.png", "~wink~"],
+ ["~package~", "1f4e6.png", "~package~"],
+ ["~yum~", "1f60b.png", "~yum~"],
+ ["~frowning2~", "2639.png", "~frowning2~"],
+ ["~grinning~", "1f600.png", "~grinning~"],
+ ["~frowning~", "1f626.png", "~frowning~"],
+ ["~angry~", "1f620.png", "~angry~"],
+ ["~hushed~", "1f62f.png", "~hushed~"],
+ ["~smile~", "1f604.png", "~smile~"],
+ ["~joy~", "1f602.png", "~joy~"],
+ ["~innocent~", "1f607.png", "~innocent~"],
+ ["~fireworks~", "1f386.png", "~fireworks~"],
+ ["~grimacing~", "1f62c.png", "~grimacing~"],
+ ["~astonished~", "1f632.png", "~astonished~"],
+ ["~cowboy~", "1f920.png", "~cowboy~"],
+];
+
+
 var emojisData = tymojiData;
 var emojiType = "tymoji";
 var emojiURL = tymojiURL;
-var emojiSources = {"emojione": [emojioneData, emojioneURL, "EmojiOne"], "tymoji": [tymojiData, tymojiURL, "Tymoji"], "github": [githubData, githubURL, "GitHub"]};
+var emojiSources = {"emojione": [emojioneData, emojioneURL, "EmojiOne"], "tymoji": [tymojiData, tymojiURL, "Tymoji"], "github": [githubData, githubURL, "GitHub"], "twitter": [twitterData, twitterURL, "Twitter"]};
 
 if (!localStorage.tymojiEmojisType) {
 	localStorage.tymojiEmojisType = "tymoji";
@@ -189,7 +222,7 @@ if ((window.location.pathname == "/accounts/password_change/") || (window.locati
 	};
     var tymojiSettings = function() {
         setTab(3);
-        document.querySelector("#main-content").innerHTML = "<h4>Tymoji Settings</h4><br><form class=\"tymoji-settings\"><div class=\"field-wrapper\"><label>Enable Tymoji</label><select class=\"tymoji-enable-disable\"><option value=\"Enabled\">Enabled</option><option value=\"Disabled\">Disabled</option></select><br><label>Emoji Type</label><div class=\"tymoji-sample-space\">~slight_smile~ ~slight_frown~ ~open_mouth~ ~smile~ ~stuck_out_tongue_winking_eye~ ~wink~ ~joy~</div><select class=\"tymoji-emoji-selection\"><option value=\"Tymoji\">Tymoji</option><option value=\"EmojiOne\">EmojiOne</option><option value=\"GitHub\">GitHub</option></select></div></form>";
+        document.querySelector("#main-content").innerHTML = "<h4>Tymoji Settings</h4><br><form class=\"tymoji-settings\"><div class=\"field-wrapper\"><label>Enable Tymoji</label><select class=\"tymoji-enable-disable\"><option value=\"Enabled\">Enabled</option><option value=\"Disabled\">Disabled</option></select><br><label>Emoji Type</label><div class=\"tymoji-sample-space\">~slight_smile~ ~slight_frown~ ~open_mouth~ ~money_mouth~ ~smile~ ~stuck_out_tongue_winking_eye~ ~wink~ ~joy~</div><select class=\"tymoji-emoji-selection\"><option value=\"Tymoji\">Tymoji</option><option value=\"EmojiOne\">EmojiOne</option><option value=\"GitHub\">GitHub</option><option value=\"Twitter\">Twitter</option></select></div></form>";
         loadSampleEmoji();
         document.getElementsByClassName("tymoji-emoji-selection")[0].value = emojiSources[localStorage.tymojiEmojisType][2] || emojiSources.tymoji[2];
         document.getElementsByClassName("tymoji-emoji-selection")[0].onchange = function(){setEmojiType(document.getElementsByClassName("tymoji-emoji-selection")[0].value); loadSampleEmoji();};
