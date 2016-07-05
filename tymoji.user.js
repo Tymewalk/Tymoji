@@ -10,7 +10,7 @@
 // @include     http://scratch.mit.edu/accounts/password_change/*
 // @include     https://scratch.mit.edu/accounts/email_change/*
 // @include     http://scratch.mit.edu/accounts/email_change/*
-// @version     0.2-dev011
+// @version     0.2-dev012
 // @updateURL   https://www.github.com/Tymewalk/Tymoji/raw/master/tymoji.user.js
 // @grant       metadata
 // ==/UserScript==
@@ -54,6 +54,8 @@ var tymojiData = [
  ["~grimacing~", "grimacing.png", "~grimacing~"],
  ["~astonished~", "astonished.png", "~astonished~"],
  ["~cowboy~", "cowboy.png", "~cowboy~"],
+ ["~neutral_face~", "neutral_face.png", "~neutral_face~"],
+ ["~sweat~", "sweat.png", "~sweat~ (face with cold sweat)"],
 ];
 
 // Note that EmojiOne uses codepoints rather than shortname filenames
@@ -85,6 +87,8 @@ var emojioneData = [
  ["~grimacing~", "1f62c.svg", "~grimacing~"],
  ["~astonished~", "1f632.svg", "~astonished~"],
  ["~cowboy~", "1f920.svg", "~cowboy~"],
+ ["~neutral_face~", "1f610.svg", "~neutral_face~"],
+ ["~sweat~", "1f613.svg", "~sweat~ (face with cold sweat)"],
 ];
 
 var githubURL = "http://u.cubeupload.com/git/";
@@ -114,6 +118,8 @@ var githubData = [
  ["~grimacing~", "grimacing.png", "~grimacing~"],
  ["~astonished~", "astonished.png", "~astonished~"],
  // GitHub (or rather, Apple) does not have a cowboy emoji
+ ["~neutral_face~", "neutralface.png", "~neutral_face~"],
+ ["~sweat~", "sweat.png", "~sweat~ (face with cold sweat)"],
 ];
 
 // Twitter also uses codepoints instead of shortnames, but does so with .png rather than .svg
@@ -145,6 +151,8 @@ var twitterData = [
  ["~grimacing~", "1f62c.png", "~grimacing~"],
  ["~astonished~", "1f632.png", "~astonished~"],
  ["~cowboy~", "1f920.png", "~cowboy~"],
+ ["~neutral_face~", "1f610.png", "~neutral_face~"],
+ ["~sweat~", "1f613.png", "~sweat~ (face with cold sweat)"],
 ];
 
 
