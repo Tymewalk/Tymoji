@@ -10,7 +10,7 @@
 // @include     http://scratch.mit.edu/accounts/password_change/*
 // @include     https://scratch.mit.edu/accounts/email_change/*
 // @include     http://scratch.mit.edu/accounts/email_change/*
-// @version     0.2-dev009
+// @version     0.2-dev010
 // @updateURL   https://www.github.com/Tymewalk/Tymoji/raw/master/tymoji.user.js
 // @grant       metadata
 // ==/UserScript==
@@ -222,7 +222,7 @@ if ((window.location.pathname == "/accounts/password_change/") || (window.locati
 	};
     var tymojiSettings = function() {
         setTab(3);
-        document.querySelector("#main-content").innerHTML = "<h4>Tymoji Settings</h4><br><form class=\"tymoji-settings\"><div class=\"field-wrapper\"><label>Enable Tymoji</label><select class=\"tymoji-enable-disable\"><option value=\"Enabled\">Enabled</option><option value=\"Disabled\">Disabled</option></select><br><label>Emoji Type</label><div class=\"tymoji-sample-space\">~slight_smile~ ~slight_frown~ ~open_mouth~ ~money_mouth~ ~smile~ ~stuck_out_tongue_winking_eye~ ~wink~ ~joy~</div><select class=\"tymoji-emoji-selection\"><option value=\"Tymoji\">Tymoji</option><option value=\"EmojiOne\">EmojiOne</option><option value=\"GitHub\">GitHub</option><option value=\"Twitter\">Twitter</option></select></div></form>";
+        document.querySelector("#main-content").innerHTML = "<h4>Tymoji Settings</h4><br><form class=\"tymoji-settings\"><div class=\"field-wrapper\"><label>Enable Tymoji</label><select class=\"tymoji-enable-disable\"><option value=\"Enabled\">Enabled</option><option value=\"Disabled\">Disabled</option></select><br><label>Emoji Type</label><div class=\"tymoji-sample-space\">~slight_smile~ ~slight_frown~ ~open_mouth~ ~package~ ~smile~ ~stuck_out_tongue_winking_eye~ ~wink~ ~joy~</div><select class=\"tymoji-emoji-selection\"><option value=\"Tymoji\">Tymoji</option><option value=\"EmojiOne\">EmojiOne</option><option value=\"GitHub\">GitHub</option><option value=\"Twitter\">Twitter</option></select></div></form>";
         loadSampleEmoji();
         document.getElementsByClassName("tymoji-emoji-selection")[0].value = emojiSources[localStorage.tymojiEmojisType][2] || emojiSources.tymoji[2];
         document.getElementsByClassName("tymoji-emoji-selection")[0].onchange = function(){setEmojiType(document.getElementsByClassName("tymoji-emoji-selection")[0].value); loadSampleEmoji();};
