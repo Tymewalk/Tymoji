@@ -10,7 +10,7 @@
 // @include     http://scratch.mit.edu/accounts/password_change/*
 // @include     https://scratch.mit.edu/accounts/email_change/*
 // @include     http://scratch.mit.edu/accounts/email_change/*
-// @version     0.2-dev012
+// @version     0.2-dev013
 // @updateURL   https://www.github.com/Tymewalk/Tymoji/raw/master/tymoji.user.js
 // @grant       metadata
 // ==/UserScript==
@@ -123,7 +123,7 @@ var githubData = [
 ];
 
 // Twitter also uses codepoints instead of shortnames, but does so with .png rather than .svg
-var twitterURL = "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/72x72/"
+var twitterURL = "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/2/72x72/"
 var twitterData = [
  ["~slight_smile~", "1f642.png", "~slight_smile~"],
  ["~slight_frown~", "1f641.png", "~slight_frown~"],
