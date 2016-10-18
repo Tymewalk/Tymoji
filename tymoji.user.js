@@ -10,7 +10,7 @@
 // @include     http://scratch.mit.edu/accounts/password_change/*
 // @include     https://scratch.mit.edu/accounts/email_change/*
 // @include     http://scratch.mit.edu/accounts/email_change/*
-// @version     0.2-dev013
+// @version     0.2-dev014
 // @updateURL   https://www.github.com/Tymewalk/Tymoji/raw/master/tymoji.user.js
 // @grant       metadata
 // ==/UserScript==
@@ -26,7 +26,7 @@ var sigs = sigs.filter( function( el ) {
 } );
 */
 
-var tymojiURL = "https://cdn.rawgit.com/Tymewalk/Tymoji/master/img/tymoji/png/";
+var tymojiURL = "https://raw.githubusercontent.com/Tymewalk/Tymoji/master/img/tymoji/png/";
 var tymojiData = [
  ["~slight_smile~", "slight_smile.png", "~slight_smile~"],
  ["~slight_frown~", "slight_frown.png", "~slight_frown~"],
