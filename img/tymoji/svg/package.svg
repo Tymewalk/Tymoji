@@ -5,11 +5,11 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   version="1.1"
+   width="127.99999"
+   height="127.99999"
+   viewBox="0 0 128 127.99999"
    id="svg4139"
-   viewBox="0 0 744.09448819 1052.3622047"
-   height="297mm"
-   width="210mm">
+   version="1.1">
   <defs
      id="defs4141" />
   <metadata
@@ -25,62 +25,63 @@
     </rdf:RDF>
   </metadata>
   <g
+     transform="translate(-290.77954,-481.58277)"
      id="layer1">
     <path
-       id="rect4687"
+       style="opacity:1;fill:#5f5947;fill-opacity:1;stroke:none;stroke-width:3.89219189;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 291.08651,495.96827 63.76091,21.93011 0,91.68439 -63.76091,-21.93011 z"
-       style="opacity:1;fill:#5f5947;fill-opacity:1;stroke:none;stroke-width:3.89219189;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       id="rect4687" />
     <path
-       style="opacity:1;fill:#736543;fill-opacity:1;stroke:none;stroke-width:3.89219189;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4705"
        d="m 354.87507,517.89838 63.76094,-21.93011 0,91.68439 -63.76094,21.93011 z"
-       id="path4705" />
+       style="opacity:1;fill:#736543;fill-opacity:1;stroke:none;stroke-width:3.89219189;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
-       id="rect4707"
+       style="opacity:1;fill:#a49062;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 356.55977,481.58277 62.21977,14.43099 -63.45903,23.89474 -64.54097,-23.76866 z"
-       style="opacity:1;fill:#a49062;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       id="rect4707" />
     <path
-       id="path4710"
+       style="fill:#876d2f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 373.11422,485.19727 -67.59229,16.10727 0.39763,19.53324 21.58051,10.80431 0.52805,-21.45753 67.95793,-19.44438 z"
-       style="fill:#876d2f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+       id="path4710" />
     <path
-       id="path9344"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 359.97549,527.82649 29.22506,-11.06104 0,22.13721 -29.43136,10.42861 z"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <text
-       transform="matrix(0.7891958,-0.23975018,0.15509032,1.2199977,0,0)"
-       id="text9346"
-       y="506.77744"
-       x="357.97385"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.12421703px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35025383"
-       xml:space="preserve"><tspan
-         y="506.77744"
-         x="357.97385"
-         id="tspan9348">To: Scratch</tspan></text>
+       id="path9344" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.12421703px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35025383"
-       x="357.10321"
-       y="511.20782"
-       id="text9350"
+       x="357.97385"
+       y="506.77744"
+       id="text9346"
        transform="matrix(0.7891958,-0.23975018,0.15509032,1.2199977,0,0)"><tspan
-         id="tspan9352"
-         x="357.10321"
-         y="511.20782">From: Tymewalk</tspan><tspan
-         id="tspan9354"
-         x="357.10321"
-         y="516.3631" /></text>
+         id="tspan9348"
+         x="357.97385"
+         y="506.77744">To: Scratch</tspan></text>
     <text
        transform="matrix(0.7891958,-0.23975018,0.15509032,1.2199977,0,0)"
-       id="text9356"
-       y="516.20282"
-       x="356.12161"
+       id="text9350"
+       y="511.20782"
+       x="357.10321"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.12421703px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35025383"
        xml:space="preserve"><tspan
-         y="516.20282"
+         y="511.20782"
+         x="357.10321"
+         id="tspan9352">From: Tymewalk</tspan><tspan
+         y="516.3631"
+         x="357.10321"
+         id="tspan9354" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.12421703px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35025383"
+       x="356.12161"
+       y="516.20282"
+       id="text9356"
+       transform="matrix(0.7891958,-0.23975018,0.15509032,1.2199977,0,0)"><tspan
+         id="tspan9358"
          x="356.12161"
-         id="tspan9358">Tymoji Shipping</tspan><tspan
-         y="521.35809"
+         y="516.20282">Tymoji Shipping</tspan><tspan
+         id="tspan9360"
          x="356.12161"
-         id="tspan9360" /></text>
+         y="521.35809" /></text>
   </g>
 </svg>

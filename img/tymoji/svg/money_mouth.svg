@@ -6,34 +6,34 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   version="1.1"
+   width="36.124443mm"
+   height="36.124443mm"
+   viewBox="0 0 128 127.99999"
    id="svg2"
-   viewBox="0 0 744.09448819 1052.3622047"
-   height="297mm"
-   width="210mm">
+   version="1.1">
   <defs
      id="defs4">
     <linearGradient
        id="linearGradient8214">
       <stop
-         id="stop8216"
+         style="stop-color:#ffffff;stop-opacity:1;"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         id="stop8216" />
       <stop
-         id="stop8218"
+         style="stop-color:#ffffff;stop-opacity:0;"
          offset="1"
-         style="stop-color:#ffffff;stop-opacity:0;" />
+         id="stop8218" />
     </linearGradient>
     <radialGradient
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1,0,0,1.8075611,0,-509.83323)"
-       r="9.1243653"
-       fy="631.32465"
-       fx="314.28406"
-       cy="631.32465"
-       cx="314.28406"
+       xlink:href="#linearGradient8214"
        id="radialGradient8220"
-       xlink:href="#linearGradient8214" />
+       cx="314.28406"
+       cy="631.32465"
+       fx="314.28406"
+       fy="631.32465"
+       r="9.1243649"
+       gradientTransform="matrix(1,0,0,1.8075611,0,-509.83323)"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <metadata
      id="metadata7">
@@ -48,54 +48,55 @@
     </rdf:RDF>
   </metadata>
   <g
+     transform="matrix(0.78190795,0,0,0.78190795,-183.88148,-387.86004)"
      id="layer1">
     <circle
-       r="80.851067"
-       cy="577.89417"
-       cx="317.0213"
+       style="opacity:1;fill:#feff75;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4136"
-       style="opacity:1;fill:#feff75;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       cx="317.0213"
+       cy="577.89417"
+       r="80.851067" />
     <path
-       id="path4142"
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 263.41464,593.82562 c 0,0 9.16676,25.45015 29.91659,36.44396 12.07724,6.39884 34.5295,2.25566 44.47365,0.1414 15.52741,-3.30135 30.4878,-36.58536 30.4878,-36.58536 z"
-       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1" />
-    <text
-       id="text8051"
-       y="570.17285"
-       x="270.58307"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:56.38335419px;font-family:arial;-inkscape-font-specification:arial;text-align:start;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000;stroke:#000000;stroke-opacity:1;fill-opacity:1"
-         y="570.17285"
-         x="270.58307"
-         id="tspan8053">$</tspan></text>
+       id="path4142" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:56.38335419px;font-family:arial;-inkscape-font-specification:arial;text-align:start;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="329.11966"
+       x="270.58307"
        y="570.17285"
-       id="text8055"><tspan
-         id="tspan8057"
-         x="329.11966"
+       id="text8051"><tspan
+         id="tspan8053"
+         x="270.58307"
          y="570.17285"
-         style="fill:#000000;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1">$</tspan></text>
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">$</tspan></text>
+    <text
+       id="text8055"
+       y="570.17285"
+       x="329.11966"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:56.38335419px;font-family:arial;-inkscape-font-specification:arial;text-align:start;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         y="570.17285"
+         x="329.11966"
+         id="tspan8057">$</tspan></text>
     <g
-       transform="matrix(1.0380777,0,0,1.0380777,-244.21945,-16.749172)"
-       id="layer1-7">
+       id="layer1-7"
+       transform="matrix(1.0380777,0,0,1.0380777,-244.21945,-16.749172)">
       <path
-         style="opacity:1;fill:#01ff00;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path6720"
          d="m 560.97559,612.11829 c -1.58347,22.68282 -10.4396,33.00914 -23.83395,32.40264 -12.13331,-0.54941 -19.01649,-11.36379 -18.84898,-31.18313 0,-12.79684 9.15438,-10.9756 21.95122,-10.9756 12.79684,0 20.73171,-3.04075 20.73171,9.75609 z"
-         id="path6720" />
+         style="opacity:1;fill:#01ff00;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <text
-       id="text8051-1"
-       y="643.48877"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.84477997px;font-family:arial;-inkscape-font-specification:arial;text-align:start;text-anchor:start;opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.27146673;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="304.51776"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.84477997px;font-family:arial;-inkscape-font-specification:arial;text-align:start;text-anchor:start;opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.27146673;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
-       xml:space="preserve"><tspan
-         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.27146673;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
-         y="643.48877"
+       y="643.48877"
+       id="text8051-1"><tspan
+         id="tspan8053-3"
          x="304.51776"
-         id="tspan8053-3">$</tspan></text>
+         y="643.48877"
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.27146673;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">$</tspan></text>
   </g>
 </svg>
